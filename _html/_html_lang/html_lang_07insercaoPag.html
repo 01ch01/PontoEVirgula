@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Inserção de Imagens - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Inserção de Imagens</h1>
+      <p>Uma vez visto o básico sobre textos, vamos falar de imagens.</p>
+      <p>A primeira coisa que devemos ter em mente é que uma imagem, para ser inserida no corpo, pode vir de dois lugares: de uma página da web, ou do diretório local.</p>
+      <p>No primeiro caso, devemos apenas usar seu URL, sem tê-la na pasta do projeto. Porém, esse método não é recomendado, uma vez que a imagem é hospedada por terceiros e pode sair do ar a qualquer momento.</p>
+      <p>O melhor é colocar a imagem na pasta do projeto, e utilizar seu diretório como fonte.</p>
+      <a>De início, para informar ao navegador que temos uma imagem, devemos usar a tag <i>&lt;img></i> . Observe que ela não requer fechamento.</a>
+      <a>Em seguida, precisamos dar alguns atributos a ela. O primeiro (e obrigatório) é o <i>src</i>. Ele indica a fonte, ou source de onde a imagem foi retirada.</a>
+      <p>Como todos os outros atributos, o inserimos com um espaço, e depois igualamos usando igual e aspas. A sintaxe fica assim:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        &lt;img src=“url ou diretório da imagem”>
+      </pre>
+
+      <p>Caso decida por inserir a imagem a partir da URL, o código ficaria:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo" style="font-size: 0.9vw">
+        &lt;img src="http://pre10.deviantart.net/c527/th/pre/i/2013/141/4/2/ziggs_by_zroinked-d664r2u.jpg">
+      </pre>
+
+      <p>No segundo caso, ficaria</p>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo" style="font-size: 0.9vw">&lt;img src="file:///C/Users/Claudio Cristiane/Desktop/PáginaExemplo/ziggs_by_zroinked-d664r2u.jpg">
+      </pre>
+
+      <p>A partir de agora, todos os atributos listados são opcionais.</p>
+      <p>Podemos também especificar uma borda para a imagem, usando o atributo border e o igualando para algum valor em pixels. Por exemplo:</p>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+        &lt;img src="http://i.imgur.com/sxS9dQx.jpg" border="3">
+      </pre>
+
+      <p>Recomendamos que faça alguns exemplos em algum editor para verificar as diversas espessuras de borda.</p>
+      <a>Outro atributo importante são os <i>height</i> e <i>width</i>. (altura e comprimento, respectivamente). Se eles não forem especificados, a imagem será mantida no tamanho original. Porém, ao definir ambos os atributos, a imagem é achatada ou alongada (nas direções horizontal e vertical) conforme o valor em pixels especificado. Caso apenas um dos atributos for determinado, a imagem será alterada com base na mesma proporção.</a>
+      <p>Por exemplo:</p>
+
+      <!--EXEMPLO 5-->
+      <pre class="exemplo">
+        &lt;img src="http://i.imgur.com/sxS9dQx.jpg" height="500" width="400">
+      </pre>
+
+      <p>No caso acima, a imagem será redimensionada para entrar em acordo com tais atributos, o que poderia deixa-la fora de proporção.</p>
+      <p>Já aqui.</p>
+
+      <!--EXEMPLO 6-->
+      <pre class="exemplo">
+        &lt;img src="http://i.imgur.com/sxS9dQx.jpg" height="500”>
+      </pre>
+
+      <p>Apenas a altura da imagem será alterada para 500 pixels. O comprimento será alterado também, mas dentro da mesma escala.</p>
+      <a>Caso queiramos alinhar uma imagem dentro de um documento, devemos coloca-la dentro de tags <i>&lt;p></i> <i>&lt;/p></i>, e usar o atributo align (com os mesmos valores listados acima) em <i>&lt;p></i>. Por exemplo:</a>
+
+      <!--EXEMPLO 7-->
+      <pre class="exemplo" style="font-size: 0.9vw">
+        &lt;p align="center"> &lt;img src="file:///C|/Users/Claudio Cristiane/Pictures/Comentários/0.jpg"> &lt;/p>
+      </pre>
+
+      <a>Também existem inúmeros atributos em <i>&lt;p></i> que podem ser explorados, ficando a seu critério.</a>
+
+      <!--EXERCÍCIO-->
+      <pre class="exemplo">
+    <b>Exercício 4 – Testes com imagens:</b> <i>utilizando a imagem disponível 
+    na pasta do exercício (ou qualquer outra – da internet ou do seu computador), 
+    faça 3 códigos, dentro dos quais:</i>
+
+            <ol><i><li>A imagem possua o tamanho original, com borda 4.</li><li>A altura da imagem seja alterada para 300 e o comprimento para 700.</li><li>A imagem tenha 300 de altura, e o comprimento seja ajustado proporcionalmente.</li></i></ol></pre>
+
+      <p></p>
+      <a class="botaoEsq" href="html_lang_06formatTexto1.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_08formatTexto2.html"> PRÓXIMO ></a>
+    </div>
+
+
+  </body>
+</html>

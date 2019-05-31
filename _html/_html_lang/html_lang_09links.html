@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Links - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Links</h1>
+      <p>Agora que já trabalhamos a formatação de texto mais avançada e a inserção de imagens, veremos como funcionam os links.</p>
+      <p>Um link não é nada mais que uma ligação de um elemento da página para outro lugar – que pode ser uma página interna, externa ou arquivo</p>
+      <p>Ao criar um link, temos que considerar duas coisas: a ligação, ou seja, para onde ele vai, e também a “máscara”, ou seja, o elemento usado para fazer essa ligação.</p>
+      <p>O primeiro – e único novo – passo é indicarmos ao programa qual elemento da página ele deve usar como ligação, e para onde.</p>
+      <a>Assim, inserimos a tag <i>&lt;a></i> no início do futuro link, e <i>&lt;/a></i> no seu final.</a>
+      <p>Logo, se quisermos deixar o texto assim:</p>
+
+      <!--RESULTADO-->
+      <div class="resultado">
+        Quer um curso de HTML gratuito? <a href=""> Clique Aqui! </a>
+      </div>
+      <p>Devemos usar o seguinte código:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        Quer um curso de HTML gratuito? &lt;a href=""> Clique Aqui! &lt;/a>
+      </pre>
+      <a>O <i>href</i> indica para onde o link dve ir, seja ele um a arquivo do projeto, ou um link externo.</a>
+      <p>Dessa forma, ao clicar em <b>“Clique Aqui!”</b> o usuário será redirecionado para o link do site especificado.</p>
+      <p>É importante lembrar de sempre utilizar a sintaxe https:// antes do link, uma vez que, se for representado só por www ou equivalente, você corre o risco de seu código redirecionar para uma página (inexistente) do projeto, e não um link externo.</p>
+      <p>Se quisermos fazer com que o link seja aberto em uma nova página, usamos o atributo target e o igualamos a _blank. Existem outras sintaxes para target, mas elas fogem do foco deste curso. Veja o exemplo:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+        &lt;a href="https://twitter.com/" target="_blank"> Twitter &lt;/a>
+      </pre>
+
+      <p></p>
+      <a class="botaoEsq" href="html_lang_08formatTexto2.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_10listas.html"> PRÓXIMO ></a>
+    </div>
+
+
+  </body>
+</html>

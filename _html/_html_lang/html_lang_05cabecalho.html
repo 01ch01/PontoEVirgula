@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Cabeçalho - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Cabeçalho</h1>
+      <p>Após a identificação do documento, o próximo passo é preencher o cabeçalho. Ele deve conter informações adicionais a serem interpretadas pelo browser.</p>
+      <p>Primeiro, informamos ao navegador qual tipo de codificação ele usará em seus caracteres. Sem esse procedimento, ao compilar o código, a palavra “Canção” poderia sair como “ CanÃ§Ã£o” , por exemplo.</p>
+      <p>A codificação mais usada atualmente é a UTF-8, apesar de existirem exceções. Para informar ao editor que o código é feito em determinada função, usamos</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+            &lt;meta charset=”nome_da_codifição”&gt;
+      </pre>
+
+      <p>Nisso, podemos ainda apresentar o uso de atributos, onde <i>&lt;meta&gt</i>; é a tag principal, e charset, seu atributo. Atributos terão inúmeras finalidades no decorrer do curso.</p>
+      <p>A parte em azul representa a tag <i>&lt;meta&gt;</i>, que também serve para outras determinações.</p>
+      <p>A parte em vermelho é o atributo charset, que indica a codificação escolhida.</p>
+      <p>A parte grifada em verde, entre os sinais de aspas e igual, é o nome da codificação a ser utilizada.</p>
+      <p>Logo, caso queiramos deixar a página codificada em UTF-8, devemos construir a tag da seguinte forma:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+            &lt;meta charset=”utf-8”&gt;            
+      </pre>
+
+      <p>Alguns editores HTML, como o Adobe Dreamweaver já possuem a configuração em UTF-8 como padrão. Para alterá-la, vá em Modificar -> Propriedades da Página -> Título/Codificação.</p>
+      <p>Porém, o mesmo não acontece no Notepad++ e com o Bloco de Notas. Nesses editores, além da tag, é preciso uma configuração adicional. Veja abaixo o procedimento para cada um deles:</p>
+      <p>No Notepad++, deve-se marcar a opção HTML no menu Linguagem e marcar a Codificação em UTF-8 no menu Formatar.</p>
+      <p>Já no Bloco de Notas, ao salvar o arquivo, fique atento a caixa Codificação que aparece no canto inferior da tela ao clicar em Salvar.</p>
+      <p>Até o momento, a aparência do cabeçalho deve ficar como:</p>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+            &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+            &lt;/head&gt;
+      </pre>         
+
+      <p>Agora, vamos ao próximo passo. Para facilitar a localização da página por mecanismos de busca (como o Google), é conveniente usar meta-tags –que são como variáveis, onde atribuímos nomes e valores. Mostrarei como inserir uma breve descrição do site, e também palavras-chave.</p>
+      <p>Para inserir uma descrição, devemos usar:</p>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+            &lt;meta name="description" content="Descrição da sua página"&gt;
+      </pre>
+
+      <p>Não é recomendado que o texto da descrição tenha mais de 160 caracteres.</p>
+      <p>No código acima, utilizamos a tag &lt;meta&gt; para criar uma nova meta-tag, a qual nomeamos description através do atributo name, e inserimos seu conteúdo na área grifada em verde, através do atributo content.</p>
+      <p>Para inserir palavras-chave, devemos usar:</p>
+
+      <!--EXEMPLO 5-->
+      <pre class="exemplo">
+             &lt;meta name="keywords" content="palavra1, palavra2, palavra3"&gt;
+      </pre>         
+
+      <p>Mais uma vez, fazemos o mesmo procedimento do item anterior, substituindo apenas o nome da meta-tag e seu conteúdo. A única diferença é que devemos separar as palavras-chave por vírgulas.</p>
+      <p>Observe que description e keywords são usados como uma convenção para facilitar a indexação das páginas.</p>
+      <a>Por fim, falta darmos um nome para a página, o qual será exibido na guia superior do navegador. Esse nome é dado usando as tags <i>&lt;title&gt;</i> <i>&lt;/title&gt;</i>, colocando entre elas o nome desejado:</a>
+
+      <!--EXEMPLO 6-->
+      <pre class="exemplo">
+            &lt;title&gt; Nome da Página &lt;/title&gt;
+      </pre>
+
+      <p>Resumindo, supondo que criássemos uma página para o meu canal, ela usaria esse cabeçalho:</p>
+
+      <!--EXEMPLO 7-->
+      <pre class="exemplo">
+            &lt;head&gt;
+                &lt;meta charset="utf-8"&gt;
+                &lt;meta name="description" content="programando"&gt;
+                &lt;meta name="keywords" content="programação, aprenda, css, html, python"&gt;
+                &lt;title&gt;Programando&lt;/title&gt;
+            &lt;/head&gt;   
+      </pre>
+
+      <p>Ao contrário de alguns cursos, aqui, apenas o título e a codificação será inserida no início da página, uma vez que os demais não tem muita finalidade em um documento de testes. A partir do próximo capítulo, as tags de identação básicas já estarão inseridas.</p>
+
+      <!--EXERCICIO 8-->
+      <div class="exemplo">
+        <b>Exercício 1 – Criando seu primeiro cabeçalho:</b> <i>crie uma página de sua escolha, contendo</i>
+        <ul>
+          <li>Codificação em UTF-8</li>
+          <li>Título</li>
+          <li>Descrição</li>
+          <li>Palavras-chave</li>
+        </ul>
+      </div>
+
+      <p></p>
+      <a class="botaoEsq" href="html_lang_04salvPag.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_06formatTexto1.html"> PRÓXIMO ></a>
+    </div>
+
+  </body>
+</html>

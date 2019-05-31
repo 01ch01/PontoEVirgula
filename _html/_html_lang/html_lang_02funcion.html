@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Funcionamento do HTML - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>        
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Funcionamento do HTML</h1>
+      <p>O HTML trabalha na base de tags (ou etiquetas), onde marcamos um elemento para mostrar o que a página deve exibir. Esse sistema funciona
+        assim:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+            &lt;tag> Elemento qualquer &lt;/tag>    
+      </pre>
+
+      <p>Como pode-se perceber no exemplo, uma vez que a tag é aberta, deve-se fechá-la (salvo algumas exceções).</p>
+      <p>Uma tag HTML pode conter outra tag, e assim por diante:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+        &lt;tag>
+            &lt;outra-tag> Texto &lt;/outra-tag>
+        &lt;/tag>
+      </pre>
+
+      <a>Além disso, uma tag pode conter determinados valores – os chamados
+        atributos. No exemplo abaixo, damos ao título <i>(&lt;h1 >)</i> o atributo estilo (style), e em seguida, o igualamos a sua cor (color).</a>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+        &lt;h1 style=”color:red”> Título em Vermelho &lt;/h1>
+      </pre>
+
+      <p>Não se preocupe por não entender a função de cada elemento acima. Isso será explicado mais adiante. No momento, o objetivo é apenas compreender a sintaxe do HTML.</p>
+      <a>Se necessário, podemos também colocar comentários em meio ao nosso código. Estes serão desconsiderados no momento de compilar o script, uma vez que servirão apenas para orientar o programador. Fazemos isso utilizando <i>&lt;!-- --></i>, como no exemplo abaixo:</a>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+        &lt;h1> qualquer coisa &lt;h1>
+        &lt;!-- o que temos acima é um parágrafo sobre qualquer coisa -->
+      </pre>
+
+      <p>Observe que o texto inserido entre as tags de comentário não fará parte do código final.</p>
+      <p>Também é importante notar alguns fatores ao se escrever em HTML:</p>
+      <ul><li>A linguagem não é case-sensitive. Isso significa que não importa se algo é escrito em minúsculas ou maiúsculas, terá sempre o mesmo valor. Porém, para melhor organização, recomendo usar apenas uma formatação em todo o código.</li>
+        <li>Procure manter seu documento indentado (isto é, usando tabulações) para facilitar a manutenção.</li>
+      </ul>
+
+      <p></p>
+      <a class="botaoEsq" href="html_lang_01intro.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_03estrBasica.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Formatação de Texto II - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Formatação de Texto II</h1>
+      <p>Além das marcações de estilo, as quais fazemos com o uso de tags (negrito, itálico, etc), temos ainda os atributos. Como vimos no capítulo anterior utilizando imagens, também podemos definir atributos como fonte e cor para os textos.</p>
+      <p>Antes de prosseguir, considere que utilizando CSS ou divisões, podemos fazer o mesmo processo de forma mais rápida.</p>
+      <p>Observe o código abaixo, e sua compilação:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        &lt;body>
+            &lt;h1 style="text-align:center"> Testando Atributos em HTML &lt;/h1>
+            &lt;p style="font-family:Impact"> Esse texto está em Impact &lt;/p>
+            &lt;p style="color:green"> Esse em verde &lt;/p>
+            &lt;p style="font-size:50px"> Esse em tamanho 50 &lt;/p>
+        &lt;/body>
+      </pre>
+
+      <p>Observe o código abaixo, e sua compilação:</p>
+      <!--RESULTADO-->
+      <div class="resultado">
+        <body>
+          <h1 style="text-align:center"> Testando Atributos em HTML </h1>
+          <p style="font-family:Impact"> Esse texto está em Impact </p>
+          <p style="color:green"> Esse em verde </p>
+          <p style="font-size:50px"> Esse em tamanho 50 </p>
+        </body>
+      </div>
+
+      <p>Veja que utilizamos 4 cores diferentes para a sintaxe do código. Vamos analisar cada uma delas.</p>
+
+      <!--EXEMPLO 2-->
+      <pre  class="resultado">
+        &lt;p style="color:green"> Esse em verde &lt;/p>
+      </pre>
+
+      <p>Temos uma nova categoria, representada em verde: uma subclasse. No caso, a subclasse style. Subclasses não são tão comuns em HTML. Nesse caso, ela é usada pois temos várias possibilidades de atributos (como color, font-size, font-family) para o mesmo contexto.</p>
+      <p>Assim, quando desejamos fazer tais alterações em um texto, devemos utilizar a subclasse style, igualar, abrir aspas, e, dentro delas, informar seus atributos utilizando dois pontos para determinar o valor. Caso tenhamos mais de um atributo, os separamos por ponto e vírgula. Assim, a sintaxe para usar o style é:</p>
+
+      <!--EXEMPLO 3-->
+      <pre class="resultado">
+        &lt;tag style=“atributo_1:valor_1; atributo_2:valor_2”> &lt;/tag>
+      </pre>
+
+      <a>Onde a parte grifada em azul representa a paragrafação ou forma do texto. Por exemplo: <i>&lt;h1></i>, <i>&lt;h3></i>, <i>&lt;p></i>.</a>
+      <p>A parte em verde é a subclasse style.</p>
+      <a>A parte grifada em amarelo representa os atributos. Por exemplo: <i>color</i>, <i>font-size</i>, <i>font-family</i>, <i>text-align</i>.</a>
+      <p>E, por fim, a parte grifada em verde corresponde aos valores referentes a cada atributo. Por exemplo: blue, 30px, Arial, center.</p>
+      <p>Vejamos agora como usar cada um deles. Recomendo colocar os códigos de exemplo no editor, e fazer alguns testes.</p>
+      <ul>
+        <li><b>font-size</b> - Tamanho</li>
+      </ul>
+      <a>Usamos <i>font-size</i> para determinar um tamanho ao texto que se segue. O valor é dado pelo número em pixels, seguido por <i>px</i>. Veja os exemplos:</a>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+        &lt;1 style="font-size:50px"> Texto &lt;/h1>
+        &lt;p style="font-size:12px"> Texto &lt;/p>
+      </pre>
+
+      <ul>
+        <li><b>font-family</b> - Tipo da fonte</li>
+      </ul>
+      <a>Para uma fonte ser exibida no navegador, precisamos primeiro que ela esteja instalada no computador do usuário. Assim, usamos <i>font-family</i> para determinar uma ou mais fontes que aparecerão dentro daquela tag, sendo que a primeira fonte listada será a “primeira opção”.</a>
+      <p>Vejamos como fica a sintaxe no exemplo:</p>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+        &lt;p style="font-family:Cambria"> Texto &lt;/p>
+      </pre>
+
+      <p>Nesse exemplo, definimos que o parágrafo deve ser escrito na fonte Cambria.</p>
+      <p>Podemos escolher também várias fontes para o navegador utilizar caso não encontre a anterior, separando-as com vírgula.</p>
+
+      <!--EXEMPLO 5-->
+      <pre>
+        &lt;p style="font-family:Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif>
+      </pre>
+
+      <p>Porém, tal processo não costuma ser necessário, já que os computadores atuais possuem a maioria dessas fontes por padrão.</p>
+      <ul>
+        <li><b>font-color</b> - Cor da fonte</li>
+      </ul>
+      <p>Também podemos alterar a cor da fonte, utilizando o atributo color. Sua sintaxe é a mesma das anteriores, só que possui uma forma um pouco diferente de valores:</p>
+
+      <!--EXEMPLO 6-->
+      <pre class="exemplo">
+        &lt;p style="color:#3F9"> Verde meio azul, sei lá que cor é essa &lt;/p>
+        &lt;p style="color:red"> Vermelho &lt;/p>    
+      </pre>
+
+      <p>Podemos indicar a cor de duas formas: em hexadecimal, ou em texto. É evidente que temos uma gama bem maior de opções ao informar as cores em base hexadecimal.</p>
+      <ul>
+        <li><b>text-align</b> - Alinhamento do texto</li>
+      </ul>
+      <a>Utilizando o atributo <i>text-align</i>, podemos determinar o alinhamento do texto em relação a página. Observe o exemplo:</a>
+
+      <!--EXEMPLO 7-->
+      <pre class="exemplo">
+        &lt;h1 style="text-align:center"> Texto Centralizado &lt;/h1>
+        &lt;h1 style="text-align:left"> Texto na Esquerda &lt;/h1>
+      </pre>
+
+      <p>Dispensa dizer que informamos o tipo de alinhamento ao expressar o valor. Aqui vão suas correspondências:</p>
+      <pre class="exemplo">
+        center - Centro             right - Direita
+        left - Esquerda             justify - Justificado
+      </pre>
+
+      <a>Os atributos que estudamos acima são aplicáveis apenas a um elemento inteiro, como um parágrafo. Caso desejamos atribuir determinado estilo apenasa um trecho de texto, podemos usar a tag <i>&lt;font></i> <i>&lt;/font></i>, seguida dos seguintes atributos:</a>
+      <ul>
+        <li>size para determinar o tamanho da fonte. Utilizamos como valor, os números de -6 a +6. Faça algumas experiências para verificar os resultados.</li>
+        <li>face para escolher a fonte. Mesma sintaxe dos valores estudados no atributo font-family.</li>
+        <li>color para determinar a cor. Mesma sintaxe dos valores estudados no atributo color.</li>
+      </ul>
+      <p>Vamos agora à um exemplo:</p>
+
+      <!--EXEMPLO 8-->
+      <pre class="exemplo">
+        &lt;p> Texto em tamanho normal, &lt;font size="+2"> agora maior &lt;/font>, 
+        e &lt;font color="#006699"> agora em azul &lt;/font>, voltando ao normal
+             em seguida &lt;p>
+      </pre>        
+      <div class="resultado">
+        <p> Texto em tamanho normal, <font size="+2"> agora maior </font>, e <font color="#006699"> agora em azul </font>, voltando ao normal em seguida </p>
+      </div>
+
+      <a>Como vimos, podemos abrir e fechar a tag <i>&lt;font></i> no meio de um texto,assim como faríamos com uma formatação especial (como negrito ou sublinhado).</a>
+      <a>Assim como na subclasse style, podemos listar vários atributos em sequência na tag <i>&lt;font></i>, separando-os com vírgula.</a>
+
+      <!--EXERCÍCIO-->
+      <pre class="exemplo">
+    <b>Exercício 5 – Formatando parte de um texto:</b> <i>o objetivo desse exercício é verificar alguns conceitos sobre a sub-classe style e seus atributos, além de reforçar o uso de formatações especiais, como negrito. Recomendo fazer outros testes por conta própria para fixação.</i>
+    <i>Na frase abaixo, faça com que:</i>
+
+    Por definição, Exploit é qualquer programa, comando ou sequência de dados 
+    que se aproveite da vulnerabilidade de um sistema para invadi-lo.
+        <ol><li>O texto como um todo esteja em um parágrafo.</li><li>A palavra Exploit esteja em negrito e em azul.</li><li>A palavra programa esteja na fonte Arial.</li><li>As palavras aproveite da vulnerabilidade estejam em vermelho, com fonte +2.</li></ol></pre>
+        
+        <p></p>
+        <a class="botaoEsq" href="html_lang_07insercaoPag.html"> < VOLTAR</a>
+        <a class="botaoDir" href="html_lang_09links.html"> PRÓXIMO ></a>
+        </div>
+    </body>
+</html>

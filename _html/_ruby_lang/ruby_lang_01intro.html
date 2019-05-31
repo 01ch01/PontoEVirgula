@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Introdução - Aprenda Ruby!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="ruby_lang_01intro.html">Introdução</a>
+      <a href="ruby_lang_02var.html">Variáveis e Strings</a>
+      <a href="ruby_lang_03math.html">Operadores Básicos e Comparação</a>
+    </div>
+
+
+
+    <div class="main">
+      <h1>Obtendo Ruby</h1>
+      <p>Ruby é uma linguagem de programação dinâmica, orientada à objeto e intepretada.</p>
+      <h2>Windows</h2>
+      <p>Para baixar Ruby no Windows você precisará ir <a href="https://rubyinstaller.org/downloads/">nesse site</a> e baixar o RubyInstaller, é recomendado que você baixe o RubyInstaller 2.3.3 (32-bit), pois muitas bibliotecas são melhores implementadas na versão de 32 bits do Windows.</p>
+      <h2>OS X</h2>
+      <p>No OSX, basta rodar esses comandos para instalar a versão mais nova do Ruby:</p>
+
+      <pre class="exemplo">
+            brew install rbenv ruby-build
+            # Add rbenv to bash so that it loads every time you open a terminal
+            echo 'if which rbenv > /dev/null; then eval "$(rbenv init-)"; fi' >> ~/.bash_profile
+            source ~/.bash_profile
+
+            #Install Ruby
+            rbenv install 2.3.3
+            rbenv global 2.3.3
+      </pre>
+
+      <h2>Linux</h2>
+      <p>Existe uma forma de instalar Ruby em qualquer distro do Linux, essa é rodando os seguintes comandos:</p>
+
+      <pre class="exemplo">
+            git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+            echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+            echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+            exec $SHELL
+
+            git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+            echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+            exec $SHELL
+
+            rbenv install 2.3.3
+            rbenv global 2.3.3
+      </pre>
+
+      <h2>Executando um script em Ruby</h2>
+      <p>Para excutar um script em Ruby através da linha de comando nós apenas temos que digitar o seguinte:</p>
+
+      <pre class="exemplo">
+            ruby nome_do_arquivo.rb
+      </pre>
+
+      <p>Onde nome_do_arquivo é o nome do arquivo com o código para ser executado. <br>Ou...<br> Nós podemos executar Ruby interativamente pelo comando irb .</p>
+
+      <h2>Testando</h2>
+      <p>Agora para testar se o Ruby funciona, basta rodar</p>
+
+      <pre class="exemplo">
+            ruby -v
+      </pre>
+
+      <a>A saída vai ser algo como <pre>ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-linux]</pre>.</a>
+      <a>Agora digite <pre>irb</pre> e vamos começar o tutorial!</a>
+      <br>
+
+      <p></p>
+      <a class="botaoEsq" href="../home.html"> < VOLTAR</a>
+      <a class="botaoDir" href="ruby_lang_02var.html"> PRÓXIMO ></a>
+
+
+
+    </div>
+
+
+  </body>
+</html>

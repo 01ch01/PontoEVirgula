@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Sintaxe - Aprenda CSS 3!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../../_php/documents.php">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="css_lang_01intro.html">Introdução</a>
+      <a href="css_lang_02vinculacao.html">Vinculação CSS/HTML</a>
+      <a href="css_lang_03sintaxe.html">Sintaxe</a>
+      <a href="css_lang_04seletores.html">Seletores de Classe e ID</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Sintaxe</h1>
+      <p>Em CSS, organizamos nosso script com uma sintaxe bastante simples. Ela é dividida em <a style="font-weight: bolder">Seletor</a>, <a style="font-weight: bolder">Declaração</a>, <a style="font-weight: bolder">Propriedade</a> e <a style="font-weight: bolder">Valor</a>. Veja no exemplo:</p>
+
+      <pre class="exemplo">
+            h1 {
+                color: red;
+            }
+      </pre>
+
+      <p>Sendo assim, temos que:</p>
+      <ul>
+        <li>
+          O <a style="font-weight: bolder">seletor</a> é responsável por identificar a tag HTML que se deseja generalizar. No exemplo, é a tag <i>&lt;h1></i>.
+        </li>
+        <li>
+          <p>A <a style="font-weight: bolder">declaração</a> corresponde a todo o conteúdo entre chaves, que corresponde aos critérios estabelecidos para a tag de seu seletor.</p>
+        </li>
+        <li>
+          A <a style="font-weight: bolder">propriedade</a> corresponde a qual critério da tag deseja-se mudar. Pode ser a cor, a fonte, o tamanho da fonte, por exemplo. No caso, nos referimos ao atributo <a style="font-weight: bolder">color</a>. Tais atributos são praticamente os mesmos que usávamos dentro do atributo <a style="font-weight: bolder">style</a>, em HTML.
+        </li>
+        <li>
+          O <a style="font-weight: bolder">valor</a> é a característica da propriedade que queremos alterar. No caso, vermelho, ou <i>red</i>.
+        </li>
+      </ul>
+
+      <p>Uma das características de um seletor, é que, sua propriedade se aplica as demais tags dentro dele. Assim, se inserirmos um seletor para a tag < body >, todas as outras tags dentro dela possuirão as mesmas características declaradas.</p>
+      <p>Por fim, percebemos que a folha de estilos não é nada mais que uma sucessão de seletores, identificando e caracterizando cada parte de nosso código HTML.</p>
+      <p>Outro ponto importante é sempre utilizarmos chaves para fechar cada seletor, e terminarmos cada declaração com ponto-e-vírgula.</p>
+      <p>Por fim, veja novamente esse exemplo e tente identificar quais formatações são usadas e onde elas se aplicam.</p>
+
+      <pre class="exemplo">
+            @charset "uft-8";
+            /* CSS Document */
+            h1 {
+                font: Cambria;
+                font-size: 12px;
+                color: red;
+            }
+            h2 {
+                color: green;
+            }
+      </pre>
+
+      <p></p>
+      <a class="botaoEsq" href="css_lang_02vinculacao.html"> < VOLTAR</a>
+      <a class="botaoDir" href="css_lang_04seletores.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

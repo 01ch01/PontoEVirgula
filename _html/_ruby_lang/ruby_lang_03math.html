@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Operadores Básicos e de Comparação - Aprenda Ruby!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="ruby_lang_01intro.html">Introdução</a>
+      <a href="ruby_lang_02var.html">Variáveis e Strings</a>
+      <a href="ruby_lang_03math.html">Operadores Básicos e Comparação</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Operações Matemáticas</h1>
+      <p>A linguagem Ruby possui uma poderosa e rápida biblioteca matemática, isso quer dizer que você consegue escrever código rápido e simples para fazer várias operações.</p>
+      <a>Existem quatdo operadores básicos: <i>+</i> , <i>-</i> , <i>*</i> e <i>/</i>.<br> O <i>+</i> serve para somar dois números, por exemplo:</a>
+
+      <pre class="exemplo">
+            2 + 9       #Isso é igual a 11
+            9.2 + 1.0   #Isso é igual a 10.2
+      </pre>
+
+      <a>O <i>-</i> serve para diminuir dois números, por exemplo:</a>
+
+      <pre class="exemplo">
+            60 - 20     #Isso é igual a 40
+            50.5 - 10.5 #Isso é igual a 40 também
+      </pre>
+
+      <a>O <i>*</i> serve para multiplicar dois números, por exemplo:</a>
+
+      <pre class="exemplo">
+            70 * 2      #Isso é igual a 140
+            90.5 * 8.2  #Isso é igual a 742.0999999999999
+      </pre>
+
+      <a>O <i>/</i> serve para dividir dois números, por exemplo:</a>
+      <pre class="exemplo">
+            -60 / 2     # Isso é igual a -30
+            140.6 / 2   # Isso é igual a 70.3
+      </pre>
+
+      <a>Para pegar apenas a parte inteira de um número usamos a função <i>to_i</i> , da seguinte forma:</a>
+      <pre class="exemplo">
+            peso = 90.82
+            inteiro = peso.to_i
+            puts inteiro    # 90
+      </pre>
+
+      <a>Existem também o operador <i>**</i> que é o mesmo que exponenciação:</a>
+      <pre class="exemplo">
+            4 ** 2      #Isso é a mesma coisa que 42, que é 16.
+            36 ** 0.5   #Isso é a mesma coisa que 36 elavado a 1/2, que é 6.
+      </pre>
+
+      <p>Nós podemos fazer operações mais complexas em Ruby usando parênteses, eles funcionam da mesma forma que na matemática:</p>
+      <pre class="exemplo">
+            a = 9
+            b = 2
+            c = -4
+
+            resultado = (a + b) / c
+            puts "O resultado é #{resultado}"   #O resultado é -3
+      </pre>
+
+      <a>Por fim, existe também os atalhos para operadores.<br>Digamos que você tenha uma variável <i>a</i> de valor <i>90</i> e você queira dividir <i>a</i> por dois, seria chato ter que digitar <i>a = a / 2</i>.<br>Para resolver esse problema nós usamos os atalhos <i>+=</i> , <i>-=</i> , <i>*=</i> e <i>/=</i> , por exemplo:</a>
+
+      <pre class="exemplo">
+            a = 80
+            a /= 2      #a mesma coisa que a = a / 2, a agora tem valor de 40
+            a += 9      #a mesma coisa que a = a + 9, a agora tem valor de 49
+            a -= 19     # a agora tem valor de 30
+            a *= 2      # a agora tem valor de 80 novamente
+      </pre>
+
+      <h1>Comparação</h1>
+      <p>Comparação é uma parte muito importante em qualquer linguagem, ela serve para comparar valores e dizer se um é igual, diferente, maior ou menor que outdo. Em Ruby existem os seguintes comparadores:</p>
+      <table border='1' >
+
+        <tr>
+          <td>Operador</td>
+          <td>Descrição</td>
+        </tr>
+
+        <tr>
+          <td>==</td>
+          <td>Testa por equalidade, retorna <i>true</i> se ambos os operandos forem iguais, <i>false</i> do contrário.</td>
+        </tr>
+
+        <tr>
+          <td>!=</td>
+          <td>Testa por inequalidade, retorna <i>true</i> se ambos os operandos forem diferentes, <i>false</i> do contrário.</td>
+        </tr>
+
+        <tr>
+          <td>></td>
+          <td>Maior, retorna <i>true</i> se o primeiro operando for maior que o segundo, <i>false</i> do contrário.</td>
+        </tr>
+
+        <tr>
+          <td><</td>
+          <td>Menor, retorna <i>true</i> se o primeiro operando for menor que o segundo, <i>false</i> do contrário.</td>
+        </tr>
+
+        <tr>
+          <td>>=</td>
+          <td>Maior ou igual, retorna <i>true</i> se o primeiro operando for maior ou igual ao segundo, <i>false</i> do contrário.</td>
+        </tr>
+
+        <tr>
+          <td><=</td>
+          <td>Menor ou igual, retorna <i>true</i> se o primeiro operando for menor ou igual ao segundo, <i>false</i> do contrário.</td>
+        </tr>
+
+      </table>
+
+      <p></p>
+      <a class="botaoEsq" href="../home.html"> < VOLTAR</a>
+
+    </div>
+
+  </body>
+</html>

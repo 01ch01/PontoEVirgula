@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Variáveis e String - Aprenda Ruby!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="ruby_lang_01intro.html">Introdução</a>
+      <a href="ruby_lang_02var.html">Variáveis e Strings</a>
+      <a href="ruby_lang_03math.html">Operadores Básicos e Comparação</a>
+    </div>
+
+    <div class="main">
+
+
+      <h1>Variáveis</h1>
+      <p>Em Ruby, não é necessário declarar variáveis antes de seu uso, nemdefinir seu tipo — isso já é feito automaticamente. As variáveis podem ser de tipos diferentes, os mais básicos são:</p>
+      <ul>
+        <li>String — Todo texto em Ruby é uma String, elas são delimitadas por aspas simples '' ou duplas "".</li>
+        <li>Integer — Todo número inteiro em Ruby é uma Integer, como 5, 9 ou 2017.</li>
+        <li>Float — Todo número decimal em Ruby é um Float, como 5.2, 9.321, 2017.0.</li>
+      </ul>
+      <a>O sintaxe de declaração de variável em Ruby é bem simples e segue o seguinte formato:<br> <b>nome_da_variavel = valor_da_variavel</b> </a>
+      <p>O nome da variável tem algumas restrições, ela não pode começar com um número nem podem conter caracteres especiais, tais como o espaço.</p>
+      <a>Por exemplo, se nós quisermos declarar uma variável chamada <i>a</i> com o valor de 5 , fazemos:</a>
+
+      <pre class="exemplo">
+            a = 5
+      </pre>
+
+      <a>Se nós quisermos declarar uma variável <i>b</i> com o resultado de uma operação matemática, digamos que <i>5 × 9</i> , fazemos:</a>
+
+      <pre class="exemplo">
+            b = 5 * 9
+      </pre>
+
+      <a>O valor de <i>b</i> será 45.</a>
+      <a>Nós podemos declarar números decimais da mesma forma, lembre-se que em Ruby nós usamos <i>.</i> para separar a parte inteira da decimal, não <i>,</i> (como se usa aqui no Brasil).</a>
+
+      <pre class="exemplo">
+            c = 5.5
+      </pre>
+      <p>É possível também declarar variáveis baseadas em outras variáveis, por exemplo:</p>
+
+      <pre class="exemplo">
+            d = c + 1.5
+      </pre>
+
+      <a>O valor de <i>d</i> será 7.</a>
+      <a>Ah, <i>#</i> define comentários em Ruby, isso quer dizer que tudo que vem depois de um <i>#</i> é ignorado. Isso é útil para comentar nosso código.</a>
+
+
+      <h1>Strings</h1>
+      <p>Agora vamos falar das strings.</p>
+      <a>Uma <i>String</i> é uma variável que guarda um texto como valor, esse texto é delimitado por aspas simples <i>''</i> ou aspas duplas <i>""</i> , da seguinte maneira:</a>-
+
+      <pre class="exemplo">
+            pessoa = 'Cristiane Freitas'
+      </pre>
+
+      <a>Nesse caso, uma variável de nome <i>pessoa</i> tem o valor <i>Cristiane Freitas</i>, simples e fácil.<br> Nós podemos juntar strings usando o operador <i>+</i> da seguinte forma:</a>
+
+      <pre class="exemplo">
+            frase = 'A vaca atravessou a rua e ' + pessoa + ' viu.'
+      </pre>
+
+      <a>O valor guardado na variável <i>frase</i> é <i>A vaca atravessou a rua e Cristiane Freitas viu.</i></a>
+      <p>Porém, existe uma maneira mais fácil juntar strings em Ruby, se chama interpolação de strings. O nome pode parecer complicado, mas é muito simples, veja um exemplo:</p>
+
+      <pre class="exemplo">
+            idade = 28
+            nome = 'Cristiane Freitas'
+            frase = "#{nome} já tem #{idade} anos, eu tô c h o c a d a."
+      </pre>
+
+      <a>A variável frase tem o valor de <i>Cristiane Freitas já tem 28 anos, eu tô c h o c a d a .</i></a>
+      <a>Isso ocorre porque <i>#{nome_da_variavel}</i> dentro de uma string delimitada por aspas duplas ( <i>""</i> ) vai ser substituido pelo valor da variável.</a>
+      <p>Isso facilita muito na hora de formatar strings.</p>
+      <p>Mas, eai, como eu faço para escrever o valor das variáveis que eu tenho na tela? Bem, nós usamos métodos (que abordaremos posteriormente) para escrever texto na tela.</p>
+      <a>Uma dessas funções é a <i>puts</i> , que é uma abreviação para o nome <i>put string</i> (botar string), veja:</a>
+
+      <pre class="exemplo">
+            a = 61
+            puts a
+      </pre>
+      <a>Vai escrever <i>61</i> na tela.<br> Você pode jogar qualquer tipo de variável nessa função, seja ela uma <i>float</i>, <i>integer</i> ou <i>string</i>, vejamos um exemplo mais complexo:</a>
+
+      <pre class="exemplo">
+            criadora = 'cfreitas'
+            criador = 'ch'
+            frase = "Esse site foi desenvolvido por:\n#{criadora} e #{criador}."
+
+            puts frase
+      </pre>
+
+      <p>Esse código escreve o seguinte na tela:</p>
+
+      <pre class="exemplo">
+            Esse site foi desenvolvido por:
+            cfreitas e ch.
+      </pre>
+
+      <a>Você pode ter estranhado o <i>\n</i> , em programação isso significa quebra de linha, ou seja, ele separa as linhas.</a>
+      <p>Existem vários métodos para manipulas strings em Ruby, tais como:</p>
+      <ul>
+        <li>upcase - Retorna a String em caixa alta</li>
+        <li>downcase - Retorna a String em caixa baixa</li>
+        <li>legth - Retorna o tamanho (em caracteres) da String</li>
+      </ul>
+
+      <pre class="exemplo">
+            frase = 'Três pratos de tigre para três tigres tristes.'
+            puts frase.upcase #Escreve a frase em caixa alta
+            puts frase.downcase #Escreve a frase em caixa baixa
+            puts frase.length #Escreve o tamanho da frase (em caracteres)
+      </pre>
+
+      <a class="botaoEsq" href="../home.html"> < VOLTAR</a>
+      <a class="botaoDir" href="ruby_lang_03math.html"> PRÓXIMO ></a>
+
+    </div>
+
+  </body>
+</html>

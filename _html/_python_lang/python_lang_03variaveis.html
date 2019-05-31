@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Variáveis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="python_lang_01introducao.html">Introdução</a>
+      <a href="python_lang_02obtencao.html">Obtenção</a>
+      <a href="python_lang_03variaveis.html">Variáveis</a>
+      <a href="python_lang_04opmatematicas.html">Operações Matemáticas</a>
+      <a href="python_lang_05entradaDeDados.html">Entrada de Dados</a>
+      <a href="python_lang_06tomadasDeDecisao.html">Tomadas de Decisão e Comparadores</a>
+      <a href="python_lang_08funcoes.html">Funções</a>
+    </div>
+
+    <div class="main">
+      <h1>Variáveis</h1>
+      <p>Em Python, não é necessário declarar variáveis antes de seu uso, nem definir seu tipo – isso já é feito automaticamente. Elas podem ser de três tipos:</p>
+      <ul>
+        <li><i>int</i> para um número inteiro</li>
+        <li><i>float</i> para um número decimal</li>
+        <li><i>string</i> para uma sequência de caracteres.</li>
+      </ul>
+      <a>Por exemplo, podemos declarar uma variável <i>a</i> com valor 6, efetuando:</a>
+
+      <!--EXEMPLO 1-->
+      <div class="resultado">>>> a = 6</div>
+
+      <p>Caso desejarmos definir o valor da variável como resultado de uma operação matemática, como 2 * 3, pode fazer:</p>
+
+      <!--EXEMPLO 2-->
+      <div class="resultado">
+        >>> a = 2 * 3
+      </div>
+
+      <p>O mesmo vale para números decimais, como nos dois exemplos abaixo. Lembre-se</p>
+
+      <!--EXEMPLO 3-->
+      <div class="resultado">
+        >>> b = 1.5<br>
+        >>> b = 0.5 + 1
+      </div>
+
+      <p>Já para strings, precisamos colocar o texto desejado entre aspas, simples ou duplas:</p>
+
+      <!--EXEMPLO 4-->
+      <div class="resultado">
+        >>> c = "Programando"<br>
+        >>> c = 'Programando'
+      </div>
+
+      <a>Podemos inserir uma quebra de linha, dentro de uma variável, através do comando <i>:\n</i> no local em que a quebra precisa ser inserida. Por exemplo:</a>
+
+      <!--EXEMPLO 5-->
+      <div class="resultado">
+        >>> d = "curso desenvolvido por :\n Programando"
+      </div>        
+      <a>O valor de uma variável pode ser mostrado através do comando <i>print</i>, que deve seguir a estrutura <i>print (variável)</i>. No exemplo abaixo exibidos todas as variáveis trabalhadas nesse capítulo </a>
+
+      <!--EXEMPLO 6-->
+      <div class="resultado">
+        >>> print(a)<br>
+        6
+      </div>
+
+      <!--EXEMPLO 7-->
+      <div class="resultado">
+        >>> print(b)<br>
+        1.5
+      </div>
+
+      <!--EXEMPLO 8-->
+      <div class="resultado">
+        >>> print(c)<br>
+        Programando
+      </div>
+
+      <!--EXEMPLO 9-->
+      <div class="resultado">
+        >>> print(d)<br>
+        Programando
+      </div>
+
+      <p>Podemos imprimir mais de uma variável em uma única vez utilizando, dentro dos parênteses, uma vírgula entre cada variável. Por exemplo:</p>
+
+      <!--EXEMPLO 10-->
+      <div class="resultado">
+        >>> print(a,c)<br>
+        6 Programando
+      </div>
+
+      <p>Além disso, é possível converter um tipo de variável para outro. No exemplo abaixo, queremos a parte inteira do número 5.777.</p>
+
+      <!--EXEMPLO 11-->
+      <div class="resultado">
+        >>> int(5.777)<br>
+        5
+      </div>
+
+      <a>Se quisermos imprimir, além das variáveis, algum tipo de texto, podemos fazê-lo com o uso de aspas dentro do comando <i>print</i>. Por exemplo:</a>
+
+      <!--EXEMPLO 12-->
+      <div class="resultado">
+        >>> a = 17<br>
+        >>> print("O valor de a é", a)<br>
+        O valor de a é 17
+      </div>
+
+      <p></p>
+      <a class="botaoEsq" href="../home.html"> < VOLTAR</a>
+      <a class="botaoDir" href="python_lang_04opmatematicas.html"> PRÓXIMO ></a>
+    </div>
+
+  </body> 
+</html>

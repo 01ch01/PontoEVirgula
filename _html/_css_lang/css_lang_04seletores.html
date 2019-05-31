@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Seletores - Aprenda CSS 3!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../../_php/documents.php">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="css_lang_01intro.html">Introdução</a>
+      <a href="css_lang_02vinculacao.html">Vinculação CSS/HTML</a>
+      <a href="css_lang_03sintaxe.html">Sintaxe</a>
+      <a href="css_lang_04seletores.html">Seletores de Classe e ID</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Seletores</h1>
+      <p>Para podermos formatar a página HTML com mais praticidade, foram criados vários tipos de seletores, que vão desde os mais genéricos, até específicos.</p>
+      <a>O primeiro que usaremos são os seletores de tipo. Foi tal seletor que usamos nos exemplos até o momento. Ele é responsável por dar um estilo para todas as suas tags. Assim, ao usarmos um seletor de tipo <i>h1</i>, estamos dizendo que todo o conteúdo dentro das tags <i>&lt;h1></i> da página deve possuir a determinada formatação.</a>
+      <p>Para usarmos um seletor de tipo, basta escrever a tag desejada, sem nenhum outro caractere adicional. Veja no exemplo:</p>
+
+      <pre class="exemplo">
+            p {
+                color: red;
+                font-size: 16px;
+                font: Caimbra;
+            }
+            h2 {
+                color: green;
+                font-size: 13px;
+                font: Arial;
+            }
+      </pre>
+
+      <a>Aqui, todas as tags <i>&lt;p&gt;</i> e <i>&lt;h2&gt;</i> terão suas respectivas formatações.</a>
+
+      <pre class="exemplo">Exercício 2 – Faça com que os elementos da página index.html possuam as formatações especificadas.</pre>
+      <p>Você deve se lembrar que, em HTML, era possível termos uma tag dentro de outra tag. Caso não se lembre, veja no exemplo:</p>
+
+      <pre class="exemplo">
+            &lt;body&gt;
+                &lt;h1> Título em vermelho &lt;/h1&gt;
+                &lt;a> Parágrafo em azul &lt;/a&gt;
+
+                &lt;div&gt;
+                    &lt;h3&gt; Subtítulo em verde &lt;/h3&gt;
+                    &lt;a> Parágrafo em amarelo &lt;/a&gt;
+                &lt;/div&gt;
+                
+            &lt;/body&gt;
+      </pre>
+
+      <a>Aqui, temos um parágrafo que deve vir em azul, e outro que deve sair em amarelo. Porém, se usarmos apenas o seletor <i>a</i>, não teremos como diferenciar os parágrafos.</a>
+      <a>Note que o primeiro <i>&lt;a&gt;</i> está sozinho, enquanto que o segundo está dentro da tag <i>&lt;div&gt;</i>.</a>
+      <p>Podemos nos aproveitar disso, usando um seletor descendente. Tal seletor pode ser usado para especificar uma sequência de tags, sendo a primeira “exterior” e a última, a mais “interior”. Veja no exemplo:</p>
+
+      <pre class="exemplo">
+            a {
+                color: green;
+            }
+            div a {
+                color: yellow;
+            }
+      </pre>
+
+      <p>Quando usamos apenas <a style="font-weight: bold">a</a> como seletor, dizemos para ele aplicar tal formatação a todas as tags &lt;a&gt; da página, independentemente de como estejam.</p>
+      <p>Já quando criamos outro seletor, dessa vez com div a, fazemos com que a formatação declarada se aplica somente as tags &lt;a&gt; que estão dentro das tags &lt;div&gt;.</p>
+      <p>Lembre-se que, se temos dois seletores conflitantes, o que for mais específico irá permanecer.</p>
+      <p>Mas e se tivermos várias tags iguais e de mesma representação, que necessitam de formatações diferentes, como no exemplo abaixo?</p>
+
+      <pre class="exemplo">
+            &lt;body&gt;
+                &lt;h1&gt; Título em Verde Escuro &lt;/h1&gt;
+                &lt;h1&gt; Título em Roxo &lt;/h1&gt;
+            &lt;/body>
+      </pre>
+
+      <p>É aqui que entram os seletores de classe e ID.</p>
+      <p>Podemos especificar uma classe para cada tag &lt;h1&gt; do código. Fazemos isso inserindo o atributo HTML class dentro da tag, e o igualando a um valor qualquer, que será usado na folha de CSS:</p>
+
+      <pre class="exemplo">
+            &lt;body&gt;
+                &lt;h1 class="verde"&gt; Título em Verde Escuro &lt;/h1&gt;
+                &lt;h1 class="roxo"&gt; Título em Roxo &lt;/h1&gt;
+            &lt;/body>
+      </pre>
+
+      <p>Feito isso, devemos agora inserir os seletores no código CSS:</p>
+
+      <pre class="exemplo">
+            .verde {
+                color: #073399;
+            }
+            .roxo {
+                color: #3B177C;
+            }
+      </pre>
+
+      <p>Como pode-se perceber, anunciamos uma classe em CSS utilizando o ponto depois de seu nome.</p>
+      <p>Também podemos usar a mesma classe em vários elementos, ou usar várias classes em um mesmo elemento. Por exemplo:</p>
+
+      <pre class="exemplo">
+            &lt;body>
+                &lt;h1 class="verde grande"> Título em verde escuro &lt;/h1>
+            &lt;/body>
+      </pre>
+      <pre class="exemplo">
+            .verde {
+                color: #073399;
+            }
+            .grande {
+                font-size: 36px;
+            }
+      </pre>
+
+      <p>Assim, se quisermos usar mais de uma classe na mesma tag, basta lista-las dentro do atributo class com um espaço entre elas.</p>
+      <p>Existem também os seletores de ID. Eles funcionam praticamente da mesma forma que os seletores de classe, com algumas diferenças cruciais: seletores de ID são únicos.</p>
+      <p>O mesmo seletor de ID só pode aparecer uma vez em todo o documento, e uma tag só pode possuir um único seletor de ID.</p>
+      <p>Sendo assim, tais seletores são mais usados para formatar áreas maiores do documento. Veja no exemplo:</p>
+
+      <pre class="exemplo">
+            &lt;div id="arial">
+                &lt;h1 class="verde"> Título em Verde &lt;/h1>
+                &lt;p> Parágrafo qualquer &lt;/p>
+            &lt;/div>
+            &lt;div id="azul">
+                &lt;h1> Título em azul &lt;/h1>
+                &lt;p> Parágrafo qualquer em azul &lt;/p>
+            &lt;/div>
+
+            #arial {
+                font-family: Arial;
+            }
+            #azul {
+                color: blue;
+            }
+            .verde {
+                color: green;
+            }
+      </pre>
+
+      <p>Aqui, dizemos ao editor que a primeira divisão terá o id="arial", ao passo que a segunda, terá o id="azul". Na folha de estilo, criamos um seletor de ID com o uso da hashtag. Verifique o resultado:</p>
+
+
+      <h3 style="color: green" ><font style="font-family: Arial"> Título em verde</font> </h3>
+      <p style="font-family: Arial">Parágrafo qualquer</p>
+      <h3 style="color: blue">Título em azul</h3>
+      <p style="color: blue">Parágrafo qualquer em azul</p>
+
+
+      <br>
+
+      <p>Lembre-se que é possível construir uma folha em CSS usando somente ID's, classes, ou nenhum dos dois. Vai da preferência do programador.</p>
+
+      <p></p>
+      <a class="botaoEsq" href="css_lang_02vinculacao.html"> < VOLTAR</a>
+    </div>
+  </body>
+</html>

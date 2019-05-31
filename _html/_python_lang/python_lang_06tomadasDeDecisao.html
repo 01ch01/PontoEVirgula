@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tomadas de Decisão e Comparadores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="python_lang_01introducao.html">Introdução</a>
+      <a href="python_lang_02obtencao.html">Obtenção</a>
+      <a href="python_lang_03variaveis.html">Variáveis</a>
+      <a href="python_lang_04opmatematicas.html">Operações Matemáticas</a>
+      <a href="python_lang_05entradaDeDados.html">Entrada de Dados</a>
+      <a href="python_lang_06tomadasDeDecisao.html">Tomadas de Decisão e Comparadores</a>
+      <a href="python_lang_08funcoes.html">Funções</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Tomadas de Decisão e Comparadores</h1>
+      <p>Comparadores, como o nome diz, nos permitem comparar dois valores. Em Python, suas correspondências são:</p>
+      <table>
+        <thead></thead>
+        <tbody>
+          <tr>
+            <td>==</td>
+            <td>Igual</td>
+          </tr>
+          <tr>
+            <td>!=</td>
+            <td>Diferente</td>
+          </tr>
+          <tr>
+            <td><</td>
+            <td>Menor que</td>
+          </tr>
+          <tr>
+            <td>></td>
+            <td>Maior que</td>
+          </tr>
+          <tr>
+            <td><=</td>
+            <td>Menor ou igual</td>
+          </tr>
+          <tr>
+            <td>>=</td>
+            <td>Maior ou igual</td>
+          </tr>
+          <tr>
+            <td><i>not</i></td>
+            <td>Negação (inverso)</td>
+          </tr>
+          <tr>
+            <td><i>and</i></td>
+            <td>Ambas</td>
+          </tr>
+          <tr>
+            <td><i>or</i></td>
+            <td>Ao menos</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Podemos usar os 6 primeiros no terminal para verificar igualdades, por exemplo:</p>
+
+      <div class="resultado">
+        >>> 5 > 7<br>
+        False<br>
+        <br>
+        >>> 2 + 2 == 4<br>
+        True<br>
+        <br>
+        >>> 5 + 5 != 10<br>
+        False<br>
+        <br>
+        >>> 5 > 5<br>
+        False<br>
+        <br>
+        >>> 5 >= 5<br>
+        True<br>
+      </div>
+
+      <br><a>Tomadas de decisão permitem que o programa execute determinada parte do código caso algo seja ou não verificado. Em Python, isso é feito através dos comandos <i>if, else, elif, while e for</i>.</a>
+      <br><a>Os comandos <i>if</i> e <i>else</i> correspondem, respectivamente, à se e se não, enquanto que o <i>elif</i> pode ser usado em uma situação em que contenham várias condições, sendo uma verificada após a outra.</a>
+      <p>Por exemplo, o código abaixo pede para que o usuário insira o resultado de uma operação matemática, e informa se ele está certo ou errado.</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+            resultado = int(input("Quanto é 20 - 13?"))
+            if resultado == 7:
+                print("Resposta certa!")
+            else:
+                print("Resposta errada!")
+      </pre>
+
+      <p>Veja agora um código que classifica o usuário em criança, adolescente e adulto, conforme sua idade:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+            idade = int(input("Insira a sua idade:"))
+            if idade <= 10:
+                print("Criança.")
+            elif idade <= 17:
+                print("Adolescente.")
+            else:
+                print("Adulto.")
+      </pre>
+
+      <a>Note que usamos o <i>elif</i> na segunda condição. Observe o que aconteceria, se ao invés dele, usássemos o <i>if</i>:</a>
+      <div class="resultado">
+        Insira a sua idade: 8<br>
+        Criança.<br>
+        Adolescente.
+        >>> |
+      </div>
+      <a>Logo, concluímos que o comando <i>elif</i> faz com que, se verdadeiro, todas as condições seguintes sejam ignoradas.</a>
+      <a>Através dos comparadores <i>and</i> e <i>or</i>, podemos verificar se duas condições ocorrem simultaneamente ou apenas uma delas acontece.</a>
+      <p>Por exemplo:</p>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+            idade1 = int(input("Insira a idade do primeiro usuário: "))
+            idade2 = int(input("Insira a idade do segundo usuário: "))
+
+            if (idade1 >= 18) and (idade2 >= 18):
+                print ("Ambos podem dirigir.")
+            elif (idade1 >=18) and (idade2 < 18):
+                print ("Somente o primeiro usuáiro pode dirigir")
+            elif (idade1 < 18) and (idade2 >= 18):
+                print ("Somente o segundo usuáiro pode dirigir")
+            elif (idade1 < 18) and (idade2 < 18):
+                print ("Ninguém pode dirigir")
+      </pre>
+
+      <p>Observe sua compilação para alguns valores:</p>
+      <div class="resultado">
+        Insira a idade do primeiro usuário: 10<br>
+        Insira a idade do segundo usuário: 32<br>
+        Somente o segundo usuário pode dirigir<br>
+        <br>
+        Insira a idade do primeiro usuário: 35<br>
+        Insira a idade do segundo usuário: 17<br>
+        Somente o primeiro usuário pode dirigir<br>
+        <br>
+        Insira a idade do primeiro usuário: 19<br>
+        Insira a idade do segundo usuário: 20<br>
+        Ambos podem dirigir<br>
+        <br>
+        Insira a idade do primeiro usuário: 5<br>
+        Insira a idade do segundo usuário: 6<br>
+        Ninguém pode dirigir
+
+      </div>
+
+      <p>Agora, observe um código que recebe a nota do usuário em 4 bimestres, calcula uma média, verifica sua aprovação ou reprovação, o parabeniza em caso de bom desempenho. Compile-o e observe os resultados.</p>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+        nota1 = int(input("Insira a primeira nota: "))
+        nota2 = int(input("Insira a segunda nota: "))
+        nota3 = int(input("Insira a terceira nota: "))
+        nota4 = int(input("Insira a quarta nota: "))
+
+        media = (nota1 + nota2 + nota3 + nota4)/4
+
+        if media >= 6:
+            print ("Aprovado! Sua média é:", media)
+            if media >=9:
+                print("Parabéns!")
+            else:
+                print ("Reprovado! Sua média é:", media)
+      </pre>
+
+      <a>Por fim, os comandos <i>while</i> e <i>for</i> significam, respectivamente, <i>enquanto</i> e <i>para</i>. Eles são usados em situações nas quais determinada sequência precisa ser executada enquanto outra for verdadeira, ou durante determinado número de vezes.</a>
+      <p>Abaixo, incrementamos o código que verificava se a resposta do cálculo matemático estava certa ou errada, fazendo com que a execução só termine no momento em que a resposta estiver certa.</p>
+      <p>Note que precisamos definir um valor arbitrário diferente da resposta para a variável, a fim de impedir que o código nos retorne um erro.</p>
+
+      <!--EXEMPLO 5-->
+      <pre class="exemplo">
+            resultado = 0
+
+            while resultado != 7:
+                resultado = int(input("Quanto é 20 - 13?"))
+                if resultado == 7:
+                    print ("Resposta certa!")
+                else:
+                    print ("Resposta errada!")
+            print("Parabéns, siga para a próxima questão!")
+      </pre>
+
+      <a>O comparador <i>for</i> pode ser usado para repetir uma operação determinado número de vezes. Para cada <i>for</i>, utilizamos um contador (dado por uma variável), que assume valores dentro de um intervalo.</a>
+      <p>Por exemplo, o comando abaixo conta até 10.</p>
+
+      <!--EXEMPLO 6-->
+      <pre class="resultado">
+            for x in range(0,11);
+                print(x)
+      </pre>
+
+      <a>Em sua execução, a variável <i>x</i> assume valores de <i>0</i> até <i>10</i>, e, para cada um deles, imprime seu próprio valor.</a>
+      <div class="resultado">
+
+        0<br>
+        1<br>
+        2<br>
+        3<br>
+        4<br>
+        5<br>
+        6<br>
+        7<br>
+        8<br>
+        9<br>
+        10<br>
+      </div>
+
+      <p>Podemos incrementá-lo, de forma que o programa eleve um valor inserido pelo usuário aos valores de <i>1</i> até <i>10</i>.</p>
+
+      <!--EXEMPLO 7-->
+      <pre class="resultado">
+            a = int (input("Insira o valor: "))
+            for x in range(0, 11):
+                print (a ** x)
+            print("Operação terminada!")
+      </pre>
+
+      <p>Após a compilação:</p>
+      <div class="resultado">
+        Insira o valor: 2<br>
+
+        0<br>
+        1<br>
+        2<br>
+        4<br>
+        16<br>
+        32<br>
+        64<br>
+        128<br>
+        256<br>
+        512<br>
+        1024<br>
+        Operação terminada!<br>
+      </div>
+
+      <p></p>
+      <a class="botaoEsq" href="python_lang_05entradaDeDados.html"> < VOLTAR</a>
+      <a class="botaoDir" href="python_lang_08funcoes.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Listas - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Listas</h1>
+      <p>Outro conteúdo de grande importância dentro do HTML são as listas. Com elas, podemos construir índices, ordenar valores e criar listas (sério?!).</p>
+      <p>Antes de irmos para a prática, vale lembrar que a identação é uma ferramenta importante ao lidar com listas. Se o código não for bem tabulado, vai parecer uma orgia de tags no final. Procure fazer com que o próprio código-fonte já tenha uma aparência de lista, isso vai facilitar para você, e para quem for manipular o script.</p>
+      <p>Criar uma lista pode ser dividido em 2 passos: determinar o tipo da lista e criar seus elementos.</p>
+      <p>Existem 3 tipos de listas: as não ordenadas, ordenadas e de definição. Essa última é pouco usada, portanto, não mencionarei neste curso.Uma lista não ordenada é organizada por símbolos, e não por numerais ordinais. Dessa forma, os itens não tem uma ordem de importância dentro da lista. No HTML, o símbolo utilizado para as listas é •.</p>
+      <a>Para determinar uma lista não ordenada, usamos as tags <i>&lt;ul></i> e <i>&lt;/ul></i> no começo e fim da mesma. É como as tags <i>&lt;body></i>, indicando o fim e início do corpo.</a>
+      <a>Em seguida, usamos as tags <i>&lt;li></i> e <i>&l;/li></i> em cada elemento da lista. Não é obrigatório, mas é interessante colocar cada item em uma linha do código.</a>
+      <p>Vejamos o exemplo:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        &lt;ul>
+            &lt;li> HTML &lt;/li>
+            &lt;li> CSS &lt;/li>
+            &lt;li> PHP &lt;/li>
+            &lt;li> JavaScript &lt;/li>
+        &lt;/ul>
+      </pre>
+
+      <div class="resultado">
+        <ul>
+          <li> HTML </li>
+          <li> CSS </li>
+          <li> PHP </li>
+          <li> JavaScript </li>
+        </ul>
+      </div>
+
+      <p>Observe a forma como a lista está paragrafadada. Poderíamos simplesmente colocar todos os elementos na mesma linha, mas ficaria estranho.</p>
+      <a>Outra lista que podemos criar é a ordenada. Nela, listamos vários itens,com uma ordem de importância. Para isso, usamos as tags <i>&lt;ol></i> e <i>&lt;/ol></i>, da mesma forma que as anteriores. Veja no exemplo:</a>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+        &lt;ol>
+            &lt;li> Top &lt;/li>
+            &lt;li> Jungler &lt;/li>
+            &lt;li> Mid &lt;/li>
+            &lt;li> AdCarry &lt;/li>
+            &lt;li> Suporte &lt;/li>
+        &lt;/ol>
+      </pre>
+
+      <div class="resultado">
+        <ol>
+          <li> Top </li>
+          <li> Jungler </li>
+          <li> Mid </li>
+          <li> AdCarry </li>
+          <li> Suporte </li>
+        </ol>
+      </div>
+
+      <a>Além disso, também podemos inserir uma lista dentro de outra, colocando-a dentro das tags <i>&lt;li></i> e <i>&lt;/li></i>. Reforço ainda a necessidade de usar a identação em situações como essa. Veja o código:</a>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+        &lt;ol>
+            &lt;li> Jogos de FPS
+                &lt;ul>
+                &lt;li> Battlefield &lt;/li>
+                &lt;li> Warface &lt;/li>
+                &lt;/ul>
+            &lt;/li>
+            &lt;li> Jogos de RPG
+                &lt;ul>
+                &lt;li> Perfect World &lt;/li>
+                &lt;li> World of Warcraft &lt;/li>
+                &lt;/ul>
+            &lt;/li>
+        &lt;/ol>
+      </pre>
+
+      <p>Ao compilar tal código, esse é o resultado esperado:</p>
+      <div class="resultado">
+        <ol>
+          <li> Jogos de FPS
+            <ul>
+              <li> Battlefield </li>
+              <li> Warface </li>
+            </ul>
+          </li>
+          <li> Jogos de RPG
+            <ul>
+              <li> Perfect World </li>
+              <li> World of Warcraft </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <a>Um ponto interessante é que também podemos aplicar a sub classe style e todos seus atributos nos elementos <i>&lt;ul></i> ou <i>&lt;ol></i> para alterar toda a lista, ou apenas nos elementos <i>&lt;li></i>, para alterar apenas o texto entre aquelas tags.</a>
+      <p>Também podemos aplicar as formatações especiais e links em toda a lista, ou em elementos específicos.</p>
+
+      <!--EXERCÍCIO-->
+      <pre class="exemplo">
+    <b>Exercício 8 – Organizando uma lista:</b> <i>crie uma lista com as seguintes
+     estrutura e valores. Em seguida, faça com que:</i>
+        Atores e filmes<ol><li>Nicolas Cage</li><ul><li>National Treasure</li><li>Snowden</li></ul>
+            <li>Morgan Freeman</li><ul><li>Now You See Me</li><li>Oblivion</li></ul>
+            <li>Leonardo DiCaprio</li><ul><li>Inception</li><li>Shutter Island</li></ul>
+        </ol><ol><i><li>O título da lista deve estar em h3</li><li>Toda a lista Nicolas Cage deve ficar azul</li><li>Now You See Me deve estar em negrito e verde</li><li>Toda a lista Leonardo DiCaprio deve estar em fonte Arial e em negrito</li><li>Island (apenas Island) deve ficar </li></i>
+        </ol></pre>
+      <a class="botaoEsq" href="html_lang_09links.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_11tabelas.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Entre na Sua Conta</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/aprenda.css" />
+    <link rel="stylesheet" href="../_css/academic_style.css" />
+    <link rel="stylesheet" href="../_css/meuLogin.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <script type="text/javascript" src="../_js/formularios.js"></script>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img align="right" src="../_img/logo.png" alt="logo" />
+      <p><a href="home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="youtube.html">Recomendações</a></li>
+        <li><a href="documents.html">Documentos</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="form.html">Fale Conosco</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="fundo">
+      <h1>Você precisa entrar para poder ter acesso aos materiais gratuitos!</h1>
+      <div class="formiznho">
+
+        <form name="login" action="../_php/documents.php" onsubmit="return validacao()" method="POST" >
+          <p>Insira seu nome de usuário:</p>
+          <p> <input size="40" type="text" id="nome" required /> </p>
+
+          <p>Insira aqui a sua senha:</p>
+          <p> <input size="40" type="password" id="senha" required autofocus /> </p>
+
+          <input type="submit" name="send" value="ENTRAR"/>
+        </form>
+
+      </div>
+      <h1>Não tem uma conta? <a href="cadastro.html" >Cadastre-se!</a></h1>
+    </div>
+
+
+  </body>
+</html>

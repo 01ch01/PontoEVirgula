@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Entrada de Dados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="python_lang_01introducao.html">Introdução</a>
+      <a href="python_lang_02obtencao.html">Obtenção</a>
+      <a href="python_lang_03variaveis.html">Variáveis</a>
+      <a href="python_lang_04opmatematicas.html">Operações Matemáticas</a>
+      <a href="python_lang_05entradaDeDados.html">Entrada de Dados</a>
+      <a href="python_lang_06tomadasDeDecisao.html">Tomadas de Decisão e Comparadores</a>
+      <a href="python_lang_08funcoes.html">Funções</a>
+    </div>
+
+    <div class="main">
+      <h1>Entrada de Dados</h1>
+      <p>É fundamental que, para rodar um programa, coletemos informações inseridas pelo usuário.</p>
+      <a>Em Python, isso pode ser feito através do comando input. Ele apresenta a estrutura <i>input(“Pergunta”),</i>, na qual a mensagem destinada ao usuário é inserida entre aspas e parênteses.</a>
+      <p>Para salvar o valor recebido em uma variável, podemos utilizar a seguinte sintaxe:</p>
+
+      <div class="resultado">
+        >>> a = input("Qual a sua idade?")
+        Qual a sua idade?
+
+
+      </div>        
+      <a>Assim que o usuário inserir o valor, ele será armazenado na variável <i>a</i>. Se, em seguida, exibirmos a variável em questão, receberemos:</a>
+
+      <div class="resultado">
+        >>> print(a)<br>
+        20<br>
+
+      </div>        
+      <p>Para evitar entradas erradas, podemos condicionar a entrada de dados para determinado modelo. Por exemplo, se quisermos que um valor seja transformado em inteiro após ser recebido, podemos utilizar:</p> 
+
+      <div class="resultado">
+        >>> a = int(input("Qual a sua idade?"))            
+      </div>        
+      <p>Essa conversão pode ser útil em operações matemáticas, evitando erros posteriores.</p>
+      <a>Por padrão, a entrada <i>input</i> já condiciona o resultado à sua string. Porém, podemos recebe-la (ou converter determinado valor para string) utilizando o comando <i>str</i>.</a>
+
+      <div class="resultado">
+        >>> b = str(input("Qual o seu nome?"))
+      </div>       
+      <p>Veja abaixo um código capaz de receber o nome e idade do usuário e, em seguida, exibi-la na tela.</p>
+
+      <!--EXEMPLO 1-->
+      <div class="resultado">
+        a = str(input("Qual o seu nome?"))<br>
+        b = int(input("Qual a sua idade?"))<br>
+        print("Meu nome é ",a, "e eu tenho",b, "anos.")<br>
+      </div>
+
+      <p>Tal código, após a sua compilação, irá apresentar o seguinte resultado, mostrado abaixo</p>
+      <div class="resultado">
+        Qual o seu nome? João<br>
+        Qual a sua idade? 25<br>
+        Meu nome é João e eu tenho 25 anos.<br>
+
+      </div>
+
+      <p>Não é possível somarmos valores de texto, mas o python permite que estes sejam mesclados ou exibidos diversas vezes na tela. Por exemplo:</p>
+
+      <div class="resultado">
+        >>> a = "João"<br>
+        >>> a = "da Silva"<br>
+        >>> a + b<br>
+        João da Silva<br>
+
+      </div>
+      <p>Para mesclarmos, podemos utilizar o sinal de multiplicação seguido do número de vezes em que a palavra deve ser repetida. Veja abaixo, como continuação do código anterior:</p>
+
+      <div class="resultado">
+        >>> a*3<br>
+        JoãoJoãoJoão<br>
+
+      </div>
+      <p>Por fim, observe o código abaixo, que utiliza os conceitos estudados neste conteúdo.</p>
+
+      <!--EXEMPLO 2-->
+      <div class="resultado">
+        a = str(input("Qual o seu nome?"))<br>
+        b = str(input("Qual seu sobrenome?"))<br>
+        c = int(input("Qual a sua idade?"))<br>
+        nomeCompleto = a + " " + b<br>
+        print("Meu nome é", nomeCompleto, " e tenho", c, " anos.")
+      </div>
+
+      <p>Após a compilação:</p>
+      <div class="resultado">
+        >Qual o seu nome? João<br>
+        >Qual seu sobrenome? Silva<br>
+        >Qual a sua idade? 17<br>
+        >Meu nome é João Silva e tenho 17 anos.<br>
+
+      </div>
+
+      <p></p>
+      <a class="botaoEsq" href="python_lang_04opmatematicas.html"> < VOLTAR</a>
+      <a class="botaoDir" href="python_lang_06tomadasDeDecisao.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

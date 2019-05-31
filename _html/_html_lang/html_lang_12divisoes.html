@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Divisões na Página - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Divisões na Página</h1>
+      <p>Temos ainda algumas tags aplicadas para estilizar a página mais facilmente dentro do CSS. Como o foco do curso é HTML, irei apenas citar seus usos.</p>
+      <a>A tag <i>&lt;div> &lt;/div></i> pode ser usada para estilizar uma grande área da página, sem a necessidade de alterar elemento por elemento.</a>
+      <a>Por exemplo, temos toda uma página HTML que precisa ser escrita em Arial. Mas é inviável criar um atributo style para cada tag. Então, abrimos e fechamos <i>&lt;div> &lt;/div></i> em toda a área afetada, e atribuímos seu estilo:</a>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+            &lt;div style="font-family:Arial; color:blue" >
+                &lth1> Título &lt/h1>
+                &lth3> Subtítulo &lt/h3>
+                &ltp> Parágrafo &lt/p>
+            &lt/div>   
+      </pre>
+
+      <div class="resultado">
+        <div style="font-family:Arial; color:blue" >
+          <h1> Título </h1>
+          <h3> Subtítulo </h3>
+          <p> Parágrafo </p>
+        </div>
+      </div>
+
+      <a>Também temos a tag <i>&lt;span> &lt;/span></i>, que, dentro do HTML, tem o mesmo funcionamento da tag &lt;font>: o de estilizar um pequeno espaço de texto. É tratado no conteúdo de CSS desta página.</a>
+
+      <p></p>
+      <a class="botaoEsq" href=html_lang_11tabelas.html> < VOLTAR</a>
+    </div>
+
+
+  </body>
+</html>

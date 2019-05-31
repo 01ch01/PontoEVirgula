@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Tabelas - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Tabelas</h1>
+      <p>Vamos agora para as tabelas. Elas são usadas para armazenar dados tabulares de forma que fiquem fáceis de ler.</p>
+      <a>Quando queremos apresentar informações em uma tabela com linhas e colunas, utilizamos inicialmente a tag <i>&lt;table></i> <i>&lt;/table></i> para marcar o início e fim de uma tabela.</a>
+      <p>Também é importante especificarmos o tamanho da borda da tabela. Usamos o atributo border e o igualamos a algum valor em pixels. Podemos, com o atributo bordercolor, determinar uma cor para a borda da tabela (não é normalmente usado).</p>
+      <p>Vamos construir uma tabela gradualmente, para que você entenda melhor o processo. Assim, temos de início:</p>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        &lt;table border="1px">
+        &lt;/table>
+      </pre>
+
+      <a>Agora, vamos adicionar as linhas. Fazemos isso utilizando as tags <i>&lt;tr></i> e <i>&lt;/tr></i> para cada linha que desejamos adicionar. Assim, se nossa tabela tem 3 linhas, nós utilizaremos essas tags 3 vezes.</a>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+        &lt;table border="1px">
+            &lt;tr> &lt;/tr>
+            &lt;tr> &lt;/tr>
+            &lt;tr> &lt;/tr>
+        &lt;/table>
+      </pre>
+
+      <a>Em HTML, não adicionamos colunas exatamente, mas sim vários elementos (ou células) na mesma linha, de forma que funcionem como colunas. Separamos cada elemento com as tags <i>&lt;td></i> <i>&lt;/td></i>.</a>
+      <a>Sendo assim, vamos adicionar um elemento <i>&lt;td></i> a cada elemento <i>&lt;tr></i> e observar o resultado.</a>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+        &lt;table border="1px">
+            &lt;tr> &lt;td> Um &lt;/td> &lt;/tr>
+            &lt;tr> &lt;td> Dois &lt;/td> &lt;/tr>
+            &lt;tr> &lt;td> Três &lt;/td> &lt;/tr>
+        &lt;/table>
+      </pre>
+
+      <div class="resultado">
+        <table border="1px">
+          <tr> <td> Um </td> </tr>
+          <tr> <td> Dois </td> </tr>
+          <tr> <td> Três </td> </tr>
+        </table>
+      </div>
+
+      <a>Criamos uma nova coluna para a tabela. Agora, vamos adicionar outra. Para tanto, inserimos uma nova sequência de elementos <i>&lt;td></i>, um em cada linha.</a>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+        &lt;table border="1px">&lt;tr> &lt;td> Um &lt;/td> &lt;td> 1 &lt;/td> &lt;/tr>
+            &lt;tr>&lt;td> Dois &lt;/td> &lt;td> 2 &lt;/td> &lt;/tr>
+            &lt;tr>&lt;td> Três &lt;/td> &lt;td> 3 &lt;/td> &lt;/tr>
+        &lt;/table>
+      </pre>
+
+      <p>Esse é o resultado:</p>
+      <div class="resultado">
+        <table border="1px"><tr> <td> Um </td> <td> 1 </td> </tr>
+          <tr> <td> Dois </td> <td> 2 </td> </tr>
+          <tr> <td> Três </td> <td> 3 </td> </tr>
+        </table>
+      </div>
+
+      <p>Você provavelmente deve estar achando isso confuso, e com razão. Organizei o código dessa maneira para que pudéssemos compreender o conceito de linhas e colunas claramente.</p>
+      <p>Existem outras formas menos intuitivas, porém mais organizadas de se identar uma tabela. Veja o exemplo:</p>
+
+      <!--EXEMPLO 5-->
+      <pre class="exemplo">
+        &lt;table border="1px">
+            &lt;tr>
+                &lt;td> Um &lt;/td>
+                &lt;td> 1 &lt;/td>
+            &lt;/tr>
+
+            &lt;tr>
+                &lt;td> Dois &lt;/td>
+                &lt;td> 2 &lt;/td>
+            &lt;/tr>
+
+            &lt;tr>
+                &lt;td> Três &lt;/td>
+                &lt;td> 3 &lt;/td>
+            &lt/tr>
+
+        &lt;/table>
+      </pre>
+
+      <p>De início, parece mesmo complicado. Mas com alguma prática, fica fácil identificar a formação final da tabela apenas pelo código.</p>
+      <p>Podemos deixar a tabela com uma aparência melhor adicionando atributos ao seu cabeçalho ou corpo.</p>
+      <a>Primeiramente, identificamos cada parte da tabela (cabeçalho e corpo)com <i>&lt;thead></i> <i>&lt;/thead></i> e <i>&lt;tbody></i> <i>&lt;/tbody></i>, respectivamente. Assim, temos:</a>
+
+      <!--EXEMPLO 6-->
+      <pre class="exemplo">
+        &lt;table border="1px">
+        &lt;thead>
+        &lt;/thead>
+        &lt;tbody>
+            &lt;tr>
+            &lt;td> Um &lt;/td>
+            &lt;td> 1 &lt;/td>
+            &lt;/tr>
+
+            &lt;tr>
+            &lt;td> Dois &lt;/td>
+            &lt;td> 2 &lt;/td>
+            &lt;/tr>
+            
+            &lt;tr>
+            &lt;td> Três &lt;/td>
+            &lt;td> 3 &lt;/td>
+            &lt;/tr>
+        &lt;/tbody>
+        &lt;/table>
+      </pre>
+
+      <a>Como ainda não possuímos um cabeçalho, apenas colocamos as tags <i>&lt;</i>thead> abaixo da tag <i>&lt;table></i>. Quanto as tags <i>&lt;tbody></i>, inserimos de forma que os valores da tabela fiquem dentro delas.</a>
+      <a>Vamos agora inserir no cabeçalho uma linha superior, aquela que dá nome a cada coluna. Fazemos isso inserindo primeiramente uma nova linha, com <i>&lt;tr></i>.</a>
+      <a>Depois, definimos cada elemento com <i>&lt;th> &lt;/th></i> (ao invés de <i>&lt;td></i>).</a>
+      <a>Como precisamos apenas de uma linha, iremos usar o conjunto <i>&lt;tr></i> <i>&lt;/tr></i> uma única vez. O número de elementos <i>&lt;th></i> que usarmos vai depender do número de colunas que a tabela possui.</a>
+
+      <!--EXEMPLO 7-->
+      <pre class="exemplo">
+        &lt;thead>
+            &lt;tr>
+                &lt;th> Escrita &lt;/th>
+                &lt;th> Decimal &lt;/th>
+            &lt;/tr>
+        &lt;/thead>
+      </pre>
+
+      <p>Por padrão, o cabeçalho final ficará em negrito, como abaixo. Porém, podemos usar a sub classe style para alterar a formatação de qualquer valor da tabela.</p>
+      <a>Por exemplo, se quisermos mudar a cor de todo o cabeçalho, ou de toda uma linha, basta adicionar esse atributo a tag <i>&lt;tr></i>.</a>
+
+      <div class="resultado">
+        <table border="1px">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th>Escrita</th>
+              <th>Decimal</th>
+            </tr>
+            <tr>
+              <td>Um</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Dois</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Três</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--EXERCÍCIOS-->
+      <pre class="exemplo">
+<b>Exercício - Criando sua primeira tabela:</b> <i>reproduza a tabela abaixo, tendo 1px como borda, o cabeçalho em vermelho e toda a tabela em fonte Arial.</i>
+       <table border="1px">
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <th><font color="red"> Item </font></th>
+                        <th><font color="red"> Preço </font></th>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>R$ 21,00</td>
+                    </tr>
+                    <tr>
+                        <td>Teclado</td>
+                        <td>R$ 34,00</td>
+                    </tr>
+                    <tr>
+                        <td>Monitor</td>
+                        <td>R$ 320,00</td>
+                    </tr>
+                </tbody>
+       </table>
+      </pre>
+
+      <p>Também podemos colocar um título, o qual ocuparia, em uma linha, toda a extensão da tabela. É o mesmo que criar uma linha com apenas uma coluna, só que ocupando o espaço todo.</p>
+      <a>Inserimos o título como uma segunda linha no cabeçalho, acima da nomenclatura das colunas, usando as tags <i>&lt;th></i> e <i>&lt;tr></i>.</a>
+      <a>Para informar ao editor que a nova linha é na verdade um título, deve-se usar o atributo colspan na linha em questão (indicada pela tag <i>&lt;th></i>) e o igualar ao número de colunas da tabela.</a>
+      <p>Esse seria o cabeçalho com título da tabela trabalhada anteriormente:</p>
+
+      <!--EXEMPLO 8-->
+      <pre class="exemplo">
+      &lt;thead>
+        &lt;tr>
+            &lt;th colspan="2"> Valores &lt;/th>
+        &lt;/tr>
+
+        &lt;tr>
+            &lt;th> Escrita &lt;/th>
+            &lt;th> Decimal &lt;/th>
+        &lt;/tr>
+     &lt;/thead>
+      </pre>
+
+      <p>Ao passo que esse seria o resultado compilado (juntamente com o corpo da tabela):</p>
+
+      <div class="resultado">
+        <table border="1px">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th colspan="2">Valores</th>  
+            </tr>
+
+            <tr>
+              <th>Escrita</th>
+              <th>Decimal</th>
+            </tr>
+
+            <tr>
+              <td>Um</td>
+              <td>1</td>
+            </tr>
+
+            <tr>
+              <td>Dois</td>
+              <td>2</td>
+            </tr>
+
+            <tr>
+              <td>Três</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>        
+      </div>
+
+      <p>Vamos utilizar o atributo bgcolor, que especifica uma cor de fundo.</p>
+      <a>Tal atributo pode ser usado tanto na tabela toda (na tag <i>&lt;table></i>), em uma linha (na tag <i>&lt;tr></i>), ou em uma única célula (nas tags <i>&lt;th></i> ou <i>&lt;td></i>).</a>
+      <p>Partindo da seguinte tabela, vamos deixá-la colorida:</p>
+
+      <table border="1px">
+        <thead></thead>
+        <tbody>
+          <tr>
+            <th colspan="2">Decimal e Binário</th>  
+          </tr>
+
+          <tr>
+            <th>Decimal</th>
+            <th>Binário</th>
+          </tr>
+
+          <tr>
+            <td>0</td>
+            <td>0</td>
+          </tr>
+
+          <tr>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>10</td>
+          </tr>
+        </tbody>
+      </table> 
+      <p>O código para sua construção segue abaixo. Recomendo construir a tabela por conta para praticar, mas se preferir, apenas cole-o no editor.</p>
+
+      <!--EXEMPLO 9-->
+      <pre class="exemplo">
+       &lt;table border="1px">
+            &lt;thead>&lt;/thead>
+                &lt;tbody>
+                    &lt;tr>
+                       &lt;th colspan="2">Decimal e Binário&lt;/th>  
+                    &lt;/tr>
+                   
+                   &lt;tr>
+                       &lt;th>Decimal&lt;/th>
+                       &lt;th>Binário&lt;/th>
+                   &lt;/tr>
+                   
+                   &lt;tr>
+                       &lt;td>0&lt;/td>
+                       &lt;td>0&lt;/td>
+                   &lt;/tr>
+                   
+                   &lt;tr>
+                       &lt;td>1&lt;/td>
+                       &lt;td>1&lt;/td>
+                   &lt;/tr>
+                   
+                   &lt;tr>
+                       &lt;td>2&lt;/td>
+                       &lt;td>10&lt;/td>
+                   &lt;tr>
+               &lt;tbody>
+           &lt;/table> 
+      </pre>
+
+      <p>Agora, vamos fazer alguns procedimentos para deixar a tabela estilizada.</p>
+      <p>O primeiro passo é determinarmos uma cor para o fundo. Deixar ela cinza é uma boa opção.</p>
+      <p>Ao consultar a tabela de cores, vemos que cinza corresponde à <b>#CCCCCC</b>. Logo, temos:</p>
+
+      <!--EXEMPLO 10-->
+      <pre>
+       &lt;table border="1px" bgcolor="#CCCCCC">
+      </pre>
+
+      <div class="resultado">
+        <table border="1px" bgcolor="#CCCCCC">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th colspan="2">Decimal e Binário</th>  
+            </tr>
+
+            <tr>
+              <th>Decimal</th>
+              <th>Binário</th>
+            </tr>
+
+            <tr>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+
+      <p>Próximo passo é mudar a cor do título da tabela para amarelo. Assim:</p>
+
+      <!--EXEMPLO 11-->
+      <pre>
+       &lt;th colspan="2" bgcolor="#CCFF66"> Decimal e Binário &lt;/th>
+      </pre>
+
+      <div class="resultado">
+        <table border="1px" bgcolor="#CCCCCC">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th colspan="2" bgcolor="#CCFF66">Decimal e Binário</th>  
+            </tr>
+
+            <tr>
+              <th>Decimal</th>
+              <th>Binário</th>
+            </tr>
+
+            <tr>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table> 
+      </div>
+
+      <a>Colorimos, então, (isso tá parecendo aqueles livrinhos infantis) a outra parte do cabeçalho da tabela. Observe que não é necessário atribuir o bgcolor para cada célula, apenas para a linha, na tag <i>&lt;tr></i>.</a>
+
+      <!--EXEMPLO 12-->
+      <pre class="exemplo">
+       &lt;tr bgcolor="#66FF66">
+           &lt;th> Decimal &lt;/th>
+           &lt;th> Binário &lt;/th>
+       &lt;/tr>
+      </pre>
+
+      <div class="resultado">
+        <table border="1px" bgcolor="#CCCCCC">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th colspan="2" bgcolor="#CCFF66">Decimal e Binário</th>  
+            </tr>
+
+            <tr bgcolor="#66FF66">
+              <th>Decimal</th>
+              <th>Binário</th>
+            </tr>
+
+            <tr>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>E se desejarmos colorir todo o corpo da tabela, sem necessariamente envolver alguma linha em particular? Isso só vai ser possível com CSS. Apenas dentro do HTML, precisamos colorir cada uma das linhas, mesmo que todas tenham a mesma cor.</p>
+      <a>Vamos ainda alterar somente uma célula da tabela. Fazemos isso atribuindo bgcolor a alguma tag <i>&lt;td></i>, como no exemplo:</a>
+
+      <!--EXEMPLO 13-->
+      <pre class="exemplo">
+       &lt;tr>
+           &lt;td bgcolor="#996666"> 2 &lt;/td>
+           &lt;td> 10 &lt;/td>
+       &lt;/tr>
+      </pre>
+
+      <div class="resultado">
+        <table border="1px" bgcolor="#CCCCCC">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <th colspan="2" bgcolor="#CCFF66">Decimal e Binário</th>  
+            </tr>
+
+            <tr bgcolor="#66FF66">
+              <th>Decimal</th>
+              <th>Binário</th>
+            </tr>
+
+            <tr>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+
+            <tr>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+
+            <tr>
+              <td bgcolor="#996666">2</td>
+              <td>10</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a>Também podemos definir uma imagem (ao invés de uma cor) como plano de fundo da nossa tabela. Fazemos isso utilizando o atributo <i>background</i> ao invés de <i>bgcolor</i>, e o igualando ao link (externo ou local) da imagem relacionada.</a>
+      <a>Tais atributos podem ser usados em outros locais da página, como na tag <i>&lt;body></i>.</a>
+      <p>Nesse caso, recomendo criar suas próprias imagens de fundo baseadas no tamanho em questão (usando Photoshop ou similares). Caso contrário, sua página pode ficar com uma péssima aparência.</p>
+
+      <!--EXERCÍCIO-->
+      <pre class="exemplo">
+<b>Exercício 11 – Tabela de cores:</b> <i>por fim, faremos uma tabela relacionando o nome de uma determinada cor, seu equivalente em HTML e a cor propriamente dita. Crie a sua, com base no exemplo:</i>
+       <table border="1px" bgcolor="#CCCCCC">
+               <thead></thead>
+               <tbody>
+                   <tr>
+                       <th colspan="3">Tabela de Cores em HTML</th>  
+                   </tr>
+                   
+                   <tr>
+                       <th>Nome</th>
+                       <th>Em HTML</th>
+                       <th>Cor</th>
+                   </tr>
+                   
+                   <tr>
+                       <td>Azul</td>
+                       <td>blue</td>
+                       <td bgcolor="blue"></td>
+                   </tr>
+                   
+                   <tr>
+                       <td>Verde</td>
+                       <td>green</td>
+                       <td bgcolor="green"></td>
+                   </tr>
+                   
+                   <tr>
+                       <td>Amarelo</td>
+                       <td>yellow</td>
+                       <td bgcolor="yellow"></td>
+                   </tr>
+                   
+                   <tr>
+                       <td>Vermelho</td>
+                       <td>red</td>
+                       <td bgcolor="red"></td>
+                   </tr>
+               </tbody>
+           </table>
+      </pre>
+      <a class="botaoEsq" href="html_lang_10listas.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_12divisoes.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

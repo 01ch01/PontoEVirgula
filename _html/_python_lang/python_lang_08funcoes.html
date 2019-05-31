@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Funções</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="python_lang_01introducao.html">Introdução</a>
+      <a href="python_lang_02obtencao.html">Obtenção</a>
+      <a href="python_lang_03variaveis.html">Variáveis</a>
+      <a href="python_lang_04opmatematicas.html">Operações Matemáticas</a>
+      <a href="python_lang_05entradaDeDados.html">Entrada de Dados</a>
+      <a href="python_lang_06tomadasDeDecisao.html">Tomadas de Decisão e Comparadores</a>
+      <a href="python_lang_08funcoes.html">Funções</a>
+    </div>
+
+    <div class="main">
+
+      <h1>Funções</h1>
+      <p>Imagine que, em um programa, determinado trecho (de várias linhas) precisa ser repetido diversas vezes. Se pudermos fazer com esse trecho seja “chamado” com um único comando, ganhamos tempo, espaço em disco, além de deixarmos o código como um todo mais elegante e menos sujeito a erros.</p> 
+      <a>Essa é a utilidade das funções. Para definir uma função, utilizamos o comando <i>def.</i> Essa função deverá, obrigatoriamente, nos retornar algum valor, o qual é especificado com o comando <i>return.</i> Por exemplo:</a>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+            def soma(x,y)
+                return x + y
+      </pre>
+      <p>Sendo assim, a função precisa de dois valores (<i>x</i> e <i>y</i>), que deverão ser somados. Chamamos uma função utilizando seu nome, seguido deste valores:</p>
+      <div class="resultado">
+        >> soma(3,5)<br>
+        8<br>
+      </div>
+      <p>Outro exemplo:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+            def quadrado(x):
+                return x**2
+      </pre>
+      <div class="resultado">
+        >>> quadrado(8)<br>
+        64<br>
+      </div>
+
+      <p>Veja agora o exemplo abaixo, que cria uma função para realizar as 4 operações fundamentais com dois números.</p>
+
+      <!--EXEMPLO 4-->
+      <pre class="exemplo">
+            soma = 0
+            subtracao = 0
+            multiplicacao = 0
+            divisao = 0
+
+            def operacoes(x,y)
+                soma = (x + y)
+                subtracao = (x - y)
+                multiplicacao = (x * y)
+                divisao = (x / y)
+
+                print("A soma é", soma)
+                print("A subtração é", subtracao)
+                print("A multiplicação é", multiplicacao)
+                print("A divisão é", divisao)
+      </pre>
+
+      <p>E sua compilação:</p>
+      <div class="resultado">
+        >>> operacoes(5,3)<br>
+        A soma é 8<br>
+        A subtração é 2<br>
+        A multiplicação é 15<br>
+        A divisão é 1.66666666667
+      </div>
+
+      <p></p>
+      <a class="botaoEsq" href="python_lang_06tomadasDeDecisao.html"> < VOLTAR</a>
+    </div>
+  </body>
+</html>

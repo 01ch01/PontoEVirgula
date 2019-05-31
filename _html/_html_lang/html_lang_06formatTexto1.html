@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Formatações de Texto I - Aprenda HTML 5!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+  <body>
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../documents.html">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="html_lang_01intro.html">Introdução a HTML</a>
+      <a href="html_lang_02funcion.html">Funcionamento</a>
+      <a href="html_lang_03estrBasica.html">Estrutura básica</a>
+      <a href="html_lang_04salvPag.html">Salvamento de paǵinas</a>
+      <a href="html_lang_05cabecalho.html">Cabeçalho</a>
+      <a href="html_lang_06formatTexto1.html">Formatação de texto I</a>
+      <a href="html_lang_07insercaoPag.html">Inserção de página</a>
+      <a href="html_lang_08formatTexto2.html">Formatação de texto II</a>
+      <a href="html_lang_09links.html">Links</a>
+      <a href="html_lang_10listas.html">Listas</a>
+      <a href="html_lang_11tabelas.html">Tabelas</a>
+      <a href="html_lang_12divisoes.html">Divisões</a>
+    </div>
+
+    <div class="main">
+      <h1>Formatações de Texto I</h1>
+      <a>Uma vez visto como configurar o cabeçalho de seu documento HTML, vamos para o corpo. Antes de mais nada, essa área é delimitada pelas tags <i>&lt; &lt;body&gt;</i> e <i>&lt;/body&gt;</i>.</a>
+      <p>Começaremos com as formatações do texto. A primeira coisa que todo documento costuma ter, é um título. Este, em HTML, possui infinitas personalizações.</p>
+      <a>De início, o HTML nos fornece 6 opções prontas para os títulos,representadas com as tags de <i>&lt;h1> &lt;/h1></i> até <i>&lt;h6> &lt;/h6></i>. Observe o código abaixo:</a>
+
+      <!--EXEMPLO 1-->
+      <pre class="exemplo">
+        &lt;body&gt;
+            &lt;h1&gt; Chefe &lt;/h1&gt;
+            &lt;h2&gt; Vice-Presidente &lt;/h2&gt;
+            &lt;h3&gt; Diretor &lt;/h3&gt;
+            &lt;h4&gt; Gerente &lt;/h4&gt;
+            &lt;h5&gt; Assistente &lt;/h5&gt;
+            &lt;h6&gt; Cara do Café &lt;/h6&gt;
+        &lt;/body&gt;
+      </pre>
+
+      <a>Como deve ter imaginado, o texto é maior em <i>&lt;h1&gt;</i>, e vai reduzindo gradativamente, até o <i>&lt;h6&gt;</i>. Veja sua compilação:</a>
+      <!--RESULTADO-->
+      <div class="resultado">
+        <h1> Chefe </h1>
+        <h2> Vice-Presidente </h2>
+        <h3> Diretor </h3>
+        <h4> Gerente </h4>
+        <h5> Assistente </h5>
+        <h6> Cara do Café </h6>
+      </div>
+
+      <a>Saindo agora dos títulos e seguindo para o texto em si, outra tag bastante utilizada é a <i>&lt;p&gt; &lt;/p&gt;</i>, usada para caracterizar um novo parágrafo.</a>
+      <p>Ela existe porque, se simplesmente colocarmos o texto solto dentro do código HTML (mesmo pulando as linhas com “enter”), o navegador o colocaria todo na mesma linha. Veja no código abaixo:</p>
+
+      <!--EXEMPLO 2-->
+      <pre class="exemplo">
+        &lt;body&gt;
+            Texto sem a Tag
+            Esse elemento deveria ficar na segunda linha
+            Esse outro, na terceira
+            Esse na quarta
+        &lt;/body&gt;
+      </pre>
+
+      <p>Ao ser compilado, obteríamos isso:</p>
+
+      <!--RESULTADO-->
+      <div class="resultado">
+        <body>
+          Texto sem a Tag
+          Esse elemento deveria ficar na segunda linha
+          Esse outro, na terceira
+          Esse na quarta
+        </body>
+      </div>
+
+      <a>Porém, utilizando a tag <i>&lt;p&gt;</i>, resolvemos o problema:</a>
+
+      <!--EXEMPLO 3-->
+      <pre class="exemplo">
+        &lt;body&gt;
+            &lt;p&gt; Texto com a Tag &lt;/p&gt;
+            &lt;p&gt; Esse elemento deveria ficar na segunda linha &lt;/p&gt;
+            &lt;p&gt; Esse outro, na terceira &lt;/p&gt;
+            &lt;p&gt; Essa na quarta &lt;/p&gt;
+        &lt;/body&gt;
+      </pre>
+
+      <p>Tendo, portanto:</p>
+
+      <!--RESULTADO-->
+      <div class="resultado">
+        <body>
+          <p> Texto com a Tag </p>
+          <p> Esse elemento deveria ficar na segunda linha </p>
+          <p> Esse outro, na terceira </p>
+          <p> Essa na quarta </p>
+        </body>
+      </div>
+
+      <p>Observe que a quebra de linha natural (isto é, a que ocorre quando acaba o espaço da página), será feita normalmente pelo navegador,independente do uso dessas tags.</p>
+      <a>Caso queiramos apenas descer uma linha, sem necessariamente representar um novo parágrafo, podemos utilizar a tag <i>&lt;br></i>. Ela não admite fechamento, nem conteúdo. Coloque-a apenas em meio ao texto para sinalizar que deve-se descer uma linha.</a>
+      <a>Recomendo usá-la apenas em casos especiais, como para escrever versos de um poema, por exemplo. Nos demais casos, prefira por usar apenas a tag <i>&lt;p></i>.</a>
+      <p>Também podemos adicionar outras formatações de texto:</p>
+
+      <ul>
+        <li><b>Negrito</b> com as tags &lt;b&gt; e &lt;/b&gt;</li>
+        <li><i>Itálico</i> com as tags &lt;i&gt; e &lt;/i&gt;</li>
+        <li><u>Sublinhado</u> com as tags &lt;u&gt; e &lt;/u&gt;</li>
+        <li><s>Tachado</s> com as tags &lt;s&gt; e &lt;/s&gt;</li>
+        <li><sub>Subscrito</sub> com as tags &lt;sub&gt; e &lt;/sub&gt;</li>
+        <li><sup>Sobrescrito</sup> com as tags &lt;sup&gt; e &lt;/sup&gt;</li>
+      </ul>
+
+      <p>Essas tags podem ser usadas em qualquer texto, independente de ele já estar ou não dentro de outra tag.</p>
+      <a>Também podemos criar uma linha horizontal que se estende por toda a página com a tag <i>&lt;hr&gt;</i>.</a>
+
+      <pre class="exemplo">
+<b>Exercício 1 – Formatações de texto:</b> <i>copie e cole o trecho abaixo no corpo da página<br>
+    (isto é, entre as determinadas tags) em um editor HTML de sua preferência.
+    
+        Sobre o Kali Linux</i><br>
+        Kali Linux é uma avançada distribuição Linux especializada em Testes de
+        Intrusão e Auditoria de Segurança.<br>
+        Funcionalidades do Kali Linux<br>
+        Kali é uma reconstrução completa do BackTrack Linux, que adere totalmente<br>
+        aos padrões de desenvolvimento do Debian. Uma infraestrutura completamente <br>
+        nova foi montada, todas as ferramentas foram revistas e empacotadas,<br> 
+        e nós utilizamos Git como nosso Sistema de Controle de Versões.<br><br>
+        <i>Agora, utilizando as tags estudadas, faça com que o texto tenha as seguintes
+        características:</i>
+        <ul><i><li>Funcionalidades do Kali Linux seja um subtítulo em &lt;h2&gt;.</li><li>Sobre o Kali Linux seja um título em &lt;h1&gt;.</li><li>Além do título e subtítulo, o texto deve ter outros 2 parágrafos.</li><li>Após o primeiro parágrafo, deve haver uma linha divisória.</li><li>Kali Linux deve estar em negrito.</li><li>BackTrackLinux deve estar em itálico.</li><li>Infraestrutura completamente nova deve estar sublinhada.</li></i></ul></pre>
+
+      <p></p>
+      <a class="botaoEsq" href="html_lang_05cabecalho.html"> < VOLTAR</a>
+      <a class="botaoDir" href="html_lang_07insercaoPag.html"> PRÓXIMO ></a>
+
+    </div>
+
+  </body>
+</html>

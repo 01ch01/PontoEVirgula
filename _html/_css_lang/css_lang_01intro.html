@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Introdução ao CSS - Aprenda CSS 3!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../_css/aprenda.css" />
+    <link rel="stylesheet" href="../../_css/academic_style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <img align="right" src="../../_img/logo.png" alt="logo" />
+      <p><a href="../home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="../../home.html">Home</a></li>
+        <li><a href="../youtube.html">Recomendações</a></li>
+        <li><a href="../../_php/documents.php">Documentos</a></li>
+        <li><a href="../login.html">Entrar</a></li>
+        <li><a href="../form.html">Fale Conosco</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="sideBar">
+      <a href="css_lang_01intro.html">Introdução</a>
+      <a href="css_lang_02vinculacao.html">Vinculação CSS/HTML</a>
+      <a href="css_lang_03sintaxe.html">Sintaxe</a>
+      <a href="css_lang_04seletores.html">Seletores de Classe e ID</a>
+    </div>
+
+    <div class="main">
+      <h1>Introdução ao CSS</h1>
+
+      <p>Caso você tenha uma noção de HTML, deve ter percebido que a determinação de atributos (cor, tamanho e fonte, por exemplo) é algo um tanto “repetitivo” de se fazer em HTML puro.</p>
+      <p>Basicamente, a função do CSS é facilitar tal tarefa. Através de generalizações, pode-se definir atributos que servirão para mais de uma tag, ou para todas as tags com determinada identificação.</p>
+      <pre class="exemplo">
+            @charset "utf-8";
+            /* CSS Document */
+            h1 {
+                font: Cambria;
+                font-size: 12px;
+                color: red;
+            }
+
+            h2 {
+                color: green;
+            }
+      </pre>
+      <a>No exemplo acima, definimos que todas as tags <pre>&lt;h1&gt;</pre> apresentariam fonte Cambria, em 12px e cor vermelha; ao passo que todas as <pre>&lt;h2&gt;</pre> seriam verdes. Basicamente, a função do CSS é essa. Mais adiante, veremos outras formas de fazer essa generalização. O script deve ser salvo em um arquivo de extensão <a style="font-weight: bolder" >.css</a>, chamado também de <a style="font-weight: bolder">folha de estilos</a> ou <a style="font-weight: bolder">stylesheet</a>.</a>
+
+
+      <p></p>
+      <a class="botaoEsq" href="../home.html"> < VOLTAR</a>
+      <a class="botaoDir" href="css_lang_02vinculacao.html"> PRÓXIMO ></a>
+    </div>
+  </body>
+</html>

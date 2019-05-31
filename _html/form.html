@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- by ch -->
+<html>
+  <head>
+    <title>Fale Conosco</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_css/academic_style.css" />
+    <link rel="stylesheet" href="../_css/meuLogin.css" />
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
+    <script type="text/javascript" src="../_js/formularios.js"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <img align="right" src="../_img/logo.png" alt="logo" />
+      <p><a href="home.html">PONTO-E-VÍRGULA</a> </p>
+
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="youtube.html">Recomendações</a></li>
+        <li><a href="documents.html">Documentos</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="form.html">Fale Conosco</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </div>
+
+    <div class="fundo">
+      <div class="formiznho">
+        <form name="faleConosco" onsubmit="mensagem()" method="POST" >
+          <p>
+            Nome:
+            <input type="text" name="nome" required autocomplete="on"/>
+          </p>
+          <p>
+            Email:
+            <input type="email" name="correio" required autocomplete="on"/>
+          </p>
+
+          <p>O que deseja falar conosco?</p>
+          <p><textarea rows="5" cols="30" ></textarea></p>
+          <input type="submit" name="send" value="ENVIAR" />
+
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

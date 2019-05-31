@@ -1,0 +1,136 @@
+/* 
+Created on : Nov 26, 2018, 12:58:22 PM
+Author     : ch
+*/
+
+/*FUNDO PADRÃO */
+.fundo{
+    background-color: tomato;
+    align-content: center;
+    width: 96%;
+    height: auto;
+    margin: 1% 0% 0% 2%;
+    border-radius: 1vw;
+    padding: 2% 0% 2% 0%;
+}
+.fundo h1{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-family: Annie Use Your Telescope;
+    font-weight: bolder;
+    font-size: 4vw;
+    text-align: center;
+}
+.fundo a{
+    color: white;
+}
+.fundo p{
+    font-size: 1vw;
+}
+
+/*UM CARD COM INPUT*/
+.formiznho{
+    display: block;
+    background-color: #3f448a;
+    width: 60%;
+    height: auto;
+    margin: 2% 2% 2% 18%;
+    color: white;
+    border-radius: 1vw;
+    font-size: 2vw;
+    padding: 2% 2% 2% 2%;
+}
+.formiznho form{
+    text-align: center;
+}
+.formiznho input, .formiznho textarea{
+    font-family: Arial;
+    font-size: 2vw;
+}
+
+/*LISTAGEM DE DOCUMENTOS*/
+.minidocs{
+    display: block;
+    background-color: #3f448a;
+    width: 88%;
+    height: auto;
+    margin: 1% 1% 1% 5%;
+    color: white;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+    padding: 1% 1% 1% 1%;
+    text-align: center;
+}
+
+/*CARDS DOS DEVS*/
+.card_um{
+    display: block;
+    background-color: #3f448a;
+    width: 43%;
+    height: 20%;
+    color: white;
+    border-radius: 1vw;
+    font-size: 2vw;
+    padding: 2% 2% 2% 2%;
+    float: left;
+    margin-left: 2%;
+}
+.card_dois{
+    display: block;
+    background-color: #3f448a;
+    width: 43%;
+    height: 20%;
+    color: white;
+    border-radius: 1vw;
+    font-size: 2vw;
+    padding: 2% 2% 2% 2%;
+    float: right;
+    margin-right: 2%;
+}
+.card_dois p, .card_um p{
+    font-size: 1.2vw;
+}
+.card_dois h1, .card_um h1{
+    font-size: 1.5vw;
+}
+.card_dois img, .card_um img{
+    display: block;
+    margin: 1% 1% 1% 35%;
+    height: 10vw;
+    width: 10vw;
+}
+.card_dois a, .card_um a{
+    font-size: 1.2vw;
+    color: white;
+}
+
+/*PLANO DE FUNDO DO FALE CONOSCO*/
+.fundinho{
+    background-color: tomato;
+    align-content: center;
+    position: absolute;
+    width: 96%;
+    height: auto;
+    margin: 1% 0% 0% 2%;
+    border-radius: 1vw;
+    padding: 2% 0% 2% 0%;
+}
+.fundinho h1{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-family: Annie Use Your Telescope;
+    font-weight: bolder;
+    font-size: 4vw;
+    text-align: center;
+}
+.fundinho h2{
+    width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-family: Annie Use Your Telescope;
+    font-weight: bolder;
+    font-size: 2.97vw;
+    text-align: center;
+}
